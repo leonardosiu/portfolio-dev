@@ -12,9 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Leonardo Siu",
-  description: "Developer Portfolio",
+  description: "Software engineer building full-stack applications, backend systems, and applied ML.",
 };
 
 export default function RootLayout({
