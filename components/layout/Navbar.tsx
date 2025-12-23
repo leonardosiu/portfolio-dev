@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="mx-auto max-w-5xl px-6 py-6 flex justify-between">
+    <nav className="mx-auto max-w-5xl px-6 py-6 flex justify-between text-white">
       <Link href="/" className="font-medium">
         Leonardo Siu
       </Link>
