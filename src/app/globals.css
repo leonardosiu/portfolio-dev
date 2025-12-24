@@ -8,8 +8,18 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-primary: var(--font-primary);
+  --font-mono: var(--font-mono);
+  --font-accent-vt323: var(--font-accent-vt323);
+  --font-accent-pixelify: var(--font-accent-pixelify);
+  --font-accent-press: var(--font-accent-press);
+  
+  /* Tailwind font families */
+  --font-family-primary: var(--font-primary), system-ui, sans-serif;
+  --font-family-mono: var(--font-mono), Consolas, Monaco, monospace;
+  --font-family-accent-vt323: var(--font-accent-vt323), monospace;
+  --font-family-accent-pixelify: var(--font-accent-pixelify), sans-serif;
+  --font-family-accent-press: var(--font-accent-press), monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +32,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary), system-ui, sans-serif;
 }
