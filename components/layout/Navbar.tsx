@@ -2,11 +2,14 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="mx-auto max-w-5xl px-6 py-6 flex justify-between text-foreground">
-      <Link href="/" className="font-medium">
-        Leonardo Siu
-      </Link>
-      <div className="flex gap-6 text-sm">
+    <nav className="mx-auto max-w-7xl px-12 py-8 hidden md:flex justify-between text-foreground">
+      <div className="flex items-center gap-4">
+        <Link href="/" className="font-bold text-lg tracking-light uppercase">
+          Leonardo Siu
+        </Link>
+        <span className="text-muted-light dark:text-muted-dark text-sm font-mono uppercase">// systems + backend</span>
+      </div>
+      <div className="flex items-center gap-8 text-sm font-medium uppercase">
         <Link href="/about">About</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/experience">Experience</Link>
