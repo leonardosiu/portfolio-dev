@@ -3,6 +3,7 @@ import { Space_Grotesk, Cascadia_Code, VT323, Pixelify_Sans, Press_Start_2P } fr
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import MobileNavbar from "@/components/layout/MobileNavbar";
 
 // Primary font
 const spaceGrotesk = Space_Grotesk({
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${cascadiaCode.variable} ${vt323.variable} ${pixelifySans.variable} ${pressStart2P.variable} antialiased`}
       >
+        <MobileNavbar />
         <Navbar />
         {children}
         <Footer />
