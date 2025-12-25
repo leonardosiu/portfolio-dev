@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Cascadia_Code, VT323, Pixelify_Sans, Press_Start_2P } from "next/font/google";
+import { Space_Grotesk, Cascadia_Code, VT323, Pixelify_Sans, Press_Start_2P, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -38,6 +38,13 @@ const pressStart2P = Press_Start_2P({
   weight: "400",
 });
 
+// Serif font (Playfair Display)
+const playfairDisplay = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata = {
   title: "Leonardo Siu",
   description: "Software engineer building full-stack applications, backend systems, and applied ML.",
@@ -51,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${cascadiaCode.variable} ${vt323.variable} ${pixelifySans.variable} ${pressStart2P.variable} antialiased`}
+        className={`${spaceGrotesk.variable} ${cascadiaCode.variable} ${vt323.variable} ${pixelifySans.variable} ${pressStart2P.variable} ${playfairDisplay.variable} antialiased`}
       >
         <MobileNavbar />
         <Navbar />

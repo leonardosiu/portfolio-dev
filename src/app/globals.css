@@ -38,6 +38,7 @@
   
   --font-primary: var(--font-primary);
   --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
   --font-accent-vt323: var(--font-accent-vt323);
   --font-accent-pixelify: var(--font-accent-pixelify);
   --font-accent-press: var(--font-accent-press);
@@ -45,6 +46,7 @@
   /* Tailwind font families */
   --font-family-primary: var(--font-primary), system-ui, sans-serif;
   --font-family-mono: var(--font-mono), Consolas, Monaco, monospace;
+  --font-family-serif: var(--font-serif), Georgia, serif;
   --font-family-accent-vt323: var(--font-accent-vt323), monospace;
   --font-family-accent-pixelify: var(--font-accent-pixelify), sans-serif;
   --font-family-accent-press: var(--font-accent-press), monospace;
