@@ -10,6 +10,7 @@ export default function SelectedWork() {
         </div>
         {/* selected work items */}
         <div className="grid grid-cols-1 gap-16 md:gap-24">
+          {/* human proximity */}
           <div className="group cursor-pointer">
             {/* image */}
             <div className="w-full aspect-[16/9] md:aspect-[21/9] hover:opacity-90 transition-transform duration-700 ease-in-out rounded-xl overflow-hidden bg-surface-light relative mb-6">
@@ -29,6 +30,30 @@ export default function SelectedWork() {
               </div>
               <div className="font-mono text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide mt-2 md:mt-1">
                 Backend • APIs • AI Systems • Microservices • Mobile App
+              </div>
+            </div>
+          </div>
+
+          {/* retinova */}
+          <div className="group cursor-pointer">
+            {/* image */}
+            <div className="w-full aspect-[16/9] md:aspect-[21/9] hover:opacity-90 transition-transform duration-700 ease-in-out rounded-xl overflow-hidden bg-surface-light relative mb-6">
+              <Image src="/images/selected-work/retinova-[21-9].png" alt="RetiNova" fill className="hidden md:block object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <Image src="/images/selected-work/retinova-[16-9].png" alt="RetiNova" fill className="block md:hidden object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+            </div>
+            {/* content */}
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
+              <div className="flex-1">
+                <h3 className="text-2xl font-medium group-hover:text-primary transition-colors">
+                  RetiNova
+                </h3>
+                <p className="text-muted-light dark:text-muted-dark mt-1 max-w-xl">
+                  won best-overall @ IrvineHacks 2025, a 36-hour hackathon.
+                  co-built a healthcare-focused AI application for detecting eye conditions, owning core system integration from model inference to a user-facing product.
+                </p>
+              </div>
+              <div className="font-mono text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide mt-2 md:mt-1">
+                Applied ML • Computer Vision • Healthcare • Full-Stack • Hackathon
               </div>
             </div>
           </div>
