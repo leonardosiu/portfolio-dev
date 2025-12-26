@@ -17,15 +17,18 @@ export default function SelectedWork() {
               <Image src="/images/selected-work/human-proximity-[16-9].png" alt="Human Proximity" fill className="block md:hidden object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
             </div>
             {/* content */}
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-              <div>
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
+              <div className="flex-1">
                 <h3 className="text-2xl font-medium group-hover:text-primary transition-colors">
                   Human Proximity
                 </h3>
-                <p className="text-muted-light dark:text-muted-dark mt-1 max-w-md">A high-throughput event processing engine capable of handling 1M+ events/sec.</p>
+                <p className="text-muted-light dark:text-muted-dark mt-1 max-w-xl">
+                  building beeseye, a mobile app for real-time networking in events.
+                  designed and implemented the backend and AI service architecture, from the API layer and AI microservices to the core product functionality.
+                </p>
               </div>
               <div className="font-mono text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide mt-2 md:mt-1">
-                Python • React • SQL
+                Backend • APIs • AI Systems • Microservices • Mobile App
               </div>
             </div>
           </div>
