@@ -67,7 +67,7 @@ export default function CustomCursor() {
         opacity: isVisible && !shouldHide ? 1 : 0,
       }}
     >
-      <div className="w-4 h-4 rounded-full bg-white" />
+      <div className="w-6 h-6 rounded-full bg-white" />
     </div>
   );
 }
