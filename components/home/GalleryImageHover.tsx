@@ -1,15 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-interface HoverCursorProps {
-  desktopSrc: string;
-  mobileSrc: string;
+interface GalleryImageHoverProps {
+  src: string;
   alt: string;
   href: string;
+  label?: string;
 }
 
-export default function HoverCursor({ desktopSrc, mobileSrc, alt, href }: HoverCursorProps) {
+export default function GalleryImageHover({ src, alt, href, label = "VIEW" }: GalleryImageHoverProps) {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
@@ -32,25 +34,16 @@ export default function HoverCursor({ desktopSrc, mobileSrc, alt, href }: HoverC
   };
 
   return (
-    <Link href={href} className="block md:cursor-none">
+    <Link href={href} className="block md:cursor-none relative z-0 hover:z-[9998]">
       <div
-        className="w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-surface-light relative mb-6 group"
+        className="bg-surface-light rounded-lg p-3 hover:-translate-y-2 transition-transform duration-500 ease-out group relative"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Image 
-          src={desktopSrc} 
-          alt={alt} 
-          fill 
-          className="hidden md:block object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-        />
-        <Image 
-          src={mobileSrc} 
-          alt={alt} 
-          fill 
-          className="block md:hidden object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
-        />
+        <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
+          <Image src={src} alt={alt} fill className="object-cover" />
+        </div>
         
         {/* Custom cursor overlay */}
         <div
@@ -77,10 +70,11 @@ export default function HoverCursor({ desktopSrc, mobileSrc, alt, href }: HoverC
               <path d="M1 12s4-4 11-4 11 4 11 4-4 4-11 4-11-4-11-4z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
-            <span className="text-sm font-medium text-foreground uppercase">VIEW CASE STUDY</span>
+            <span className="text-sm font-medium text-foreground uppercase">{label}</span>
           </div>
         </div>
       </div>
     </Link>
   );
 }
+

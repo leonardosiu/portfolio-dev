@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import GalleryImageHover from "@/components/home/GalleryImageHover";
 
 export default function CreativeBridge() {
     return (
@@ -25,24 +25,26 @@ export default function CreativeBridge() {
         {/* gallery */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* golden gate bridge */}
-          <div className="bg-surface-light rounded-lg p-3 hover:-translate-y-2 transition-transform duration-500 ease-out group md:cursor-none">
-            <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
-              <Image src="/images/creative-bridge/golden-gate.png" alt="Golden Gate Bridge" fill className="object-cover" />
-            </div>
-          </div>
+          <GalleryImageHover
+            src="/images/creative-bridge/golden-gate.png"
+            alt="Golden Gate Bridge"
+            href="/projects#creative-bridge"
+            label="VIEW"
+          />
           {/* creation of technology */}
-          <div className="bg-surface-light rounded-lg p-3 hover:-translate-y-2 transition-transform duration-500 ease-out group md:cursor-none">
-            <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
-              <Image src="/images/creative-bridge/creation-of-technology.png" alt="Creation of Technology" fill className="object-cover" />
-            </div>
-          </div>
+          <GalleryImageHover
+            src="/images/creative-bridge/creation-of-technology.png"
+            alt="Creation of Technology"
+            href="/projects#creative-bridge"
+            label="VIEW"
+          />
           {/* self portrait */}
-          {/* creation of technology */}
-          <div className="bg-surface-light rounded-lg p-3 hover:-translate-y-2 transition-transform duration-500 ease-out group md:cursor-none">
-            <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
-              <Image src="/images/creative-bridge/image.png" alt="Self Portrait" fill className="object-cover" />
-            </div>
-          </div>
+          <GalleryImageHover
+            src="/images/creative-bridge/image.png"
+            alt="Self Portrait"
+            href="/projects#creative-bridge"
+            label="VIEW"
+          />
         </div>
       </section>
     );
