@@ -3,9 +3,9 @@ import { ArrowRight, MessageSquare } from "lucide-react";
 
 export default function LeosTwinPreview() {
     return (
-      <section className="space-y-8 px-12 py-8 max-w-7xl w-full mx-auto" id="leostwin">
+      <section className="relative space-y-8 px-12 py-8 max-w-7xl w-full mx-auto overflow-hidden" id="leostwin">
         {/* gradient background */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[128px] pointer-events-none"></div>
+        <div className="absolute top-1/2 -right-52 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[128px] pointer-events-none z-0"></div>
         
         {/* header */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start md:items-center relative z-10">
