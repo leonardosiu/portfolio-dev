@@ -32,9 +32,9 @@ export default function HoverCursor({ desktopSrc, mobileSrc, alt, href }: HoverC
   };
 
   return (
-    <Link href={href} className="block">
+    <Link href={href} className="block md:cursor-none">
       <div
-        className="w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-surface-light relative mb-6 group md:cursor-none"
+        className="w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden bg-surface-light relative mb-6 group"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

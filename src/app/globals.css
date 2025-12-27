@@ -62,13 +62,13 @@ body {
 
 /* Hide default cursor on desktop when custom cursor is active */
 @media (min-width: 768px) {
-  body {
-    cursor: none;
+  * {
+    cursor: none !important;
   }
   
-  /* Hide default cursor on interactive elements when custom cursor is active */
-  a, button, [role="button"], input, textarea, select {
-    cursor: none;
+  /* Ensure custom cursor is visible */
+  body {
+    cursor: none !important;
   }
 }
 
