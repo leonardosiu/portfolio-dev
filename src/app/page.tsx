@@ -1,22 +1,24 @@
 import Hero from "@/components/home/Hero";
-import Current from "@/components/home/Current";
-import AboutPreview from "@/components/home/AboutPreview";
 import SelectedWork from "@/components/home/SelectedWork";
-import ArtPreview from "@/components/home/ArtPreview";
+import CreativeBridge from "@/components/home/CreativeBridge";
 import LeoTwinPreview from "@/components/home/LeoTwinPreview";
-import FontPreview from "@/components/home/FontPreview";
+import Divider from "@/components/layout/Divider";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-32 py-24 bg-background-light">
       <Hero />
 
-      <div className="w-full h-px bg-gray-300" />
+      <Divider />
 
-      {/* <Current />
-      <AboutPreview /> */}
       <SelectedWork />
-      <ArtPreview />
+
+      <Divider />
+
+      <CreativeBridge />
+
+      <Divider />
+      
       <LeoTwinPreview />
     </div>
   );
