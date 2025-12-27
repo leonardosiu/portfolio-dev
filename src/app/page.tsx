@@ -6,20 +6,23 @@ import Divider from "@/components/layout/Divider";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-32 py-24 bg-background-light">
-      <Hero />
+    <>
+      <div className="flex flex-col gap-32 py-24 bg-background-light">
+        <Hero />
 
+        <Divider />
+
+        <SelectedWork />
+
+        <Divider />
+
+        <CreativeBridge />
+
+        <Divider />
+
+        <LeosTwinPreview />
+      </div>
       <Divider />
-
-      <SelectedWork />
-
-      <Divider />
-
-      <CreativeBridge />
-
-      <Divider />
-      
-      <LeosTwinPreview />
-    </div>
+    </>
   );
 }
