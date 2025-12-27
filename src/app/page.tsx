@@ -10,9 +10,11 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-32 py-24 bg-background-light">
       <Hero />
-      <FontPreview />
-      <Current />
-      <AboutPreview />
+
+      <div className="w-full h-px bg-gray-300" />
+
+      {/* <Current />
+      <AboutPreview /> */}
       <SelectedWork />
       <ArtPreview />
       <LeoTwinPreview />

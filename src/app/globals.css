@@ -60,6 +60,18 @@ body {
   font-family: var(--font-primary), system-ui, sans-serif;
 }
 
+/* Hide default cursor on desktop when custom cursor is active */
+@media (min-width: 768px) {
+  body {
+    cursor: none;
+  }
+  
+  /* Hide default cursor on interactive elements when custom cursor is active */
+  a, button, [role="button"], input, textarea, select {
+    cursor: none;
+  }
+}
+
 /* Vertical text writing mode */
 .writing-vertical-rl {
   writing-mode: vertical-rl;

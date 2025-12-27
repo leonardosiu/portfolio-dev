@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileNavbar from "@/components/layout/MobileNavbar";
 import Sidebar from "@/components/layout/Sidebar";
+import CustomCursor from "@/components/layout/CustomCursor";
 
 // Primary font
 const spaceGrotesk = Space_Grotesk({
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${cascadiaCode.variable} ${vt323.variable} ${pixelifySans.variable} ${pressStart2P.variable} ${playfairDisplay.variable} antialiased`}
       >
+        <CustomCursor />
         <Sidebar />
         <div className="md:ml-20">
           <MobileNavbar />
