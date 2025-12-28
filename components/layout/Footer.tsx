@@ -13,7 +13,6 @@ export default function Footer() {
               (magic)
             </span>
           </span>{" "}
-          {/* &amp;{" "} */}
           and{" "}
           <span className="group/love inline-flex items-baseline">
             <span className="cursor-pointer font-bold">ᢉ𐭩</span>
@@ -24,17 +23,23 @@ export default function Footer() {
           .
         </p>
         <div className="flex gap-6">
-          <Link href="https://github.com/baller7215" className="flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
-            <Github className="w-4 h-4" />
-            GitHub
+          <Link href="https://github.com/baller7215" className="group/github flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
+            <Github className="w-5 h-5" />
+            <span className="inline-block overflow-hidden max-w-0 group-hover/github:max-w-[70px] opacity-0 group-hover/github:opacity-100 translate-x-[-4px] group-hover/github:translate-x-0 transition-all duration-500 ease-out whitespace-nowrap">
+              GitHub
+            </span>
           </Link>
-          <Link href="https://linkedin.com/in/leonardo-siu" className="flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
-            <Linkedin className="w-4 h-4" />
-            LinkedIn
+          <Link href="https://linkedin.com/in/leonardo-siu" className="group/linkedin flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
+            <Linkedin className="w-5 h-5" />
+            <span className="inline-block overflow-hidden max-w-0 group-hover/linkedin:max-w-[80px] opacity-0 group-hover/linkedin:opacity-100 translate-x-[-4px] group-hover/linkedin:translate-x-0 transition-all duration-500 ease-out whitespace-nowrap">
+              LinkedIn
+            </span>
           </Link>
-          <Link href="mailto:leonardo.siu.dev@gmail.com" className="flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
-            <Mail className="w-4 h-4" />
-            Email
+          <Link href="mailto:leonardo.siu.dev@gmail.com" className="group/email flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
+            <Mail className="w-5 h-5" />
+            <span className="inline-block overflow-hidden max-w-0 group-hover/email:max-w-[60px] opacity-0 group-hover/email:opacity-100 translate-x-[-4px] group-hover/email:translate-x-0 transition-all duration-500 ease-out whitespace-nowrap">
+              Email
+            </span>
           </Link>
         </div>
       </footer>
