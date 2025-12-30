@@ -38,6 +38,10 @@ export default function Hero() {
           {/* metadata */}
           <div className="md:col-span-4 flex flex-col justify-end space-y-4 font-mono text-sm">
             <div className="flex justify-between items-center group md:cursor-none">
+              <span className="text-muted-light group-hover:text-text-light transition-colors">Incoming Summer 2026</span>
+              <span className="font-medium">???</span>
+            </div>
+            <div className="flex justify-between items-center group md:cursor-none">
               <span className="text-muted-light group-hover:text-text-light transition-colors">2023 - Present</span>
               <span className="font-medium">Computer Science @ UCI</span>
             </div>
