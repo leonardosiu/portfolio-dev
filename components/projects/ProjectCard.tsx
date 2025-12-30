@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 type ProjectCardProps = {
   title: string;
@@ -27,7 +28,7 @@ export function ProjectCard({
           src={imageSrc}
           alt={imageAlt}
           fill
-          className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700 ease-out filter grayscale group-hover:grayscale-0"
+          className="object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-transform duration-700 ease-out filter grayscale-30 group-hover:grayscale-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-light to-transparent opacity-60" />
       </div>
@@ -37,9 +38,7 @@ export function ProjectCard({
           <h3 className="text-xl font-medium text-text-light group-hover:text-primary transition-colors decoration-primary underline-offset-4 group-hover:underline">
             {title}
           </h3>
-          <span className="material-symbols-outlined text-muted-light opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 duration-300 text-lg">
-            arrow_outward
-          </span>
+          <ArrowUpRight className="w-5 h-5 text-muted-light opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-transform duration-300" />
         </div>
 
         <p className="text-muted-light text-sm leading-relaxed mb-6">

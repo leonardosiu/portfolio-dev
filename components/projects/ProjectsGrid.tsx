@@ -4,60 +4,42 @@ const projects = [
   {
     title: "RetiNova",
     description:
-      "A neural retrieval engine designed to parse unstructured legal documents. Leverages semantic search to reduce discovery time by 60%.",
+      "A hackathon-winning healthcare application that detects eye conditions using computer vision, integrating model inference into a real, user-facing product. I focused on system integration including ML inference to frontend delivery, challenging under tight time constraints.",
     category: "Applied AI",
-    tech: ["Python", "Vector DB"],
-    imageSrc: "/images/projects/retinova-[16-9].png",
-    imageAlt: "RetiNova Dashboard",
+    tech: ["Applied ML", "Computer Vision", "Healthcare", "Full-Stack", "Hackathon"],
+    imageSrc: "/images/selected-work/retinova-[16-9].png",
+    imageAlt: "RetiNova",
   },
   {
-    title: "Vortex Engine",
+    title: "BeesEye @ Human Proximity",
     description:
-      "High-throughput event processing system handling 1M+ events/sec. Built with Rust for zero-cost abstractions and memory safety.",
+      "A real-time networking platform for in-person events, built around proximity-aware interactions. I designed and implemented the backend APIs and AI microservices powering matchmaking, messaging, and event logic.",
     category: "Backend",
-    tech: ["Rust", "Distributed Systems"],
-    imageSrc: "/images/projects/vortex-[16-9].png",
-    imageAlt: "Vortex Interface",
+    tech: ["Backend", "APIs", "AI Systems", "Microservices", "Mobile App"],
+    imageSrc: "/images/selected-work/human-proximity-[16-9].png",
+    imageAlt: "Human Proximity",
   },
   {
-    title: "EchoLayer",
+    title: "NLP Bias Detection",
     description:
-      "A custom networking protocol over UDP ensuring reliable delivery for real-time multiplayer gaming states.",
+      "An NLP system for detecting bias in large-scale social datasets, built by preprocessing tens of thousands of samples and fine-tuning transformer models. I worked across data pipelines, model training, and deployment to make the system usable end-to-end.",
     category: "Systems",
-    tech: ["C++", "Networking"],
-    imageSrc: "/images/projects/echolayer-[16-9].png",
-    imageAlt: "System Architecture Diagram",
+    tech: ["NLP", "Applied AI", "Data Pipelines", "Model Deployment", "ML Systems"],
+    imageSrc: "/images/selected-work/meta1b-[16-9].png",
+    imageAlt: "Meta 1B",
   },
   {
-    title: "Triage Protocol",
+    title: "Grad-CAM Tumor Classification",
     description:
-      "Automated incident response platform for DevOps teams. Reduces MTTR by 40% through intelligent alerting and playbook automation.",
-    category: "Full-Stack",
-    tech: ["Go", "Terraform"],
-    imageSrc: "/images/projects/triage-[16-9].png",
-    imageAlt: "Incident dashboard UI",
-  },
-  {
-    title: "Flux UI",
-    description:
-      "A component library focusing on accessibility and framework-agnostic composition.",
-    category: "Frontend",
-    tech: ["TypeScript", "Design Systems"],
-    imageSrc: "/images/projects/flux-[16-9].png",
-    imageAlt: "Abstract steel structure",
-  },
-  {
-    title: "DistroLog",
-    description:
-      "Experimental distributed ledger for immutable audit logs in regulated environments.",
-    category: "Backend",
-    tech: ["Go", "Cryptography"],
-    imageSrc: "/images/projects/distrolog-[16-9].png",
-    imageAlt: "Stylized Go code snippet",
+      "A computer vision project exploring tumor classification in medical imaging, with a focus on interpretability using Grad-CAM visualizations. Emphasized model evaluation, explainability, and responsible ML decision-making.",
+    category: "Systems",
+    tech: ["Computer Vision", "Machine Learning", "Healthcare", "Interpretability"],
+    imageSrc: "/images/projects/grad-cam.png",
+    imageAlt: "Grad-CAM Tumor Classification",
   },
 ];
 
-export function ProjectsGrid() {
+export default function ProjectsGrid() {
   return (
     <div className="mt-16">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-gray-100 pb-6">
@@ -79,12 +61,13 @@ export function ProjectsGrid() {
           </button>
         </div>
 
-        <div className="relative group">
+        {/* TODO: add sort by date button */}
+        {/* <div className="relative group">
           <button className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-muted-light hover:text-text-light transition-colors">
             Sort by: Date
             <span className="material-symbols-outlined text-sm">expand_more</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -93,11 +76,12 @@ export function ProjectsGrid() {
         ))}
       </div>
 
-      <div className="mt-16 flex justify-center">
+    {/* TODO: add load archived projects button */}
+    {/* <div className="mt-16 flex justify-center">
         <button className="px-6 py-3 rounded border border-gray-200 text-sm font-mono text-muted-light hover:text-primary hover:border-primary transition-colors">
-          LOAD ARCHIVED PROJECTS
+        LOAD ARCHIVED PROJECTS
         </button>
-      </div>
+    </div> */}
     </div>
   );
 }
