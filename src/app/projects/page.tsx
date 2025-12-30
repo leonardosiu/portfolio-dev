@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Projects() {
   return (
     <section className="px-6 md:px-12 pt-24 md:pt-20 pb-12 max-w-5xl mx-auto">
@@ -13,6 +11,9 @@ export default function Projects() {
           moments.
         </p>
       </div>
+      {/* project grid */}
+      {/* eslint-disable-next-line @typescript-eslint/no-var-requires */}
+      {require("../../../components/projects/ProjectsGrid").ProjectsGrid()}
     </section>
   );
 }
