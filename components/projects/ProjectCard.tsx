@@ -47,6 +47,7 @@ export function ProjectCard({
 
         <div className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-muted-light">
           <span className="text-primary">{category}</span>
+          {/** @TODO: replace w component library for tags */}
           {tech.map((item, index) => (
             <span key={item}>
               {index === 0 && "• "}
