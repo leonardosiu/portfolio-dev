@@ -2,7 +2,7 @@ import ProjectsGrid from "@/components/projects/ProjectsGrid";
 
 export default function Projects() {
   return (
-    <section className="px-6 md:px-12 pt-24 md:pt-20 pb-12 max-w-5xl mx-auto">
+    <section className="px-6 md:px-12 pt-24 md:pt-20 pb-12 max-w-7xl mx-auto">
       <div className="max-w-3xl">
         <h1 className="font-serif text-5xl md:text-6xl leading-tight mb-6">
           Projects
@@ -14,7 +14,6 @@ export default function Projects() {
         </p>
       </div>
       {/* project grid */}
-      {/* eslint-disable-next-line @typescript-eslint/no-var-requires */}
       <ProjectsGrid />
     </section>
   );
