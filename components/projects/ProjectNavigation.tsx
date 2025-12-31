@@ -17,7 +17,7 @@ export default function ProjectNavigation({ project }: ProjectNavigationProps) {
 
   return (
     <footer className="border-t border-gray-200 bg-surface-light mt-auto">
-      <div className="max-w-5xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
         {previousProject ? (
           <Link
             href={`/projects/${previousProject.id}`}

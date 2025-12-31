@@ -9,7 +9,7 @@ type ProjectHeaderProps = {
 export default function ProjectHeader({ project }: ProjectHeaderProps) {
   return (
     <>
-      <nav className="pt-8 px-6 md:px-12 max-w-5xl mx-auto w-full mb-12">
+      <nav className="pt-8 px-6 md:px-12 max-w-7xl mx-auto w-full mb-12">
         <Link
           href="/projects"
           className="inline-flex items-center gap-2 text-sm font-mono text-muted-light hover:text-primary transition-colors group"
@@ -18,7 +18,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
           BACK TO PROJECTS
         </Link>
       </nav>
-      <section className="px-6 md:px-12 max-w-5xl mx-auto w-full relative mb-16">
+      <section className="px-6 md:px-12 max-w-7xl mx-auto w-full relative mb-16">
         <div className="absolute -top-20 -left-20 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-indigo-500/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none -z-10 mix-blend-multiply opacity-70" />
         <div className="mb-8">
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-6 text-text-light">
@@ -74,7 +74,8 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
               View Repo
             </a>
           )}
-          {project.leoTwinUrl && (
+          {/* TODO: add LeoTwin integration */}
+          {/* {project.leoTwinUrl && (
             <a
               href={project.leoTwinUrl}
               target="_blank"
@@ -84,7 +85,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
               <Bot className="w-5 h-5" />
               Ask LeoTwin
             </a>
-          )}
+          )} */}
           {project.demoUrl ? (
             <a
               href={project.demoUrl}
