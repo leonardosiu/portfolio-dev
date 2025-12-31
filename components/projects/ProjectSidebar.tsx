@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import type { Project } from "@/lib/projects";
 
 type ProjectSidebarProps = {
@@ -5,6 +8,55 @@ type ProjectSidebarProps = {
 };
 
 export default function ProjectSidebar({ project }: ProjectSidebarProps) {
+  const [activeSection, setActiveSection] = useState<string>("overview");
+
+  useEffect(() => {
+    const sections = [
+      { id: "overview", condition: project.sections?.whatItIs },
+      { id: "my-role", condition: project.sections?.myRole },
+      { id: "constraints", condition: project.sections?.constraints },
+      { id: "learnings", condition: project.sections?.learnings },
+    ].filter((s) => s.condition);
+
+    const handleScroll = () => {
+      // gets current scroll position + offset for sticky header
+      const scrollPosition = window.scrollY + 200;
+
+      // iterate through sections in reverse order to find the active section
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i].id);
+        if (section) {
+          const sectionTop = section.offsetTop;
+          // if scroll position is greater than section top, set active section
+          if (scrollPosition >= sectionTop) {
+            setActiveSection(sections[i].id);
+            break;
+          }
+        }
+      }
+    };
+
+    // set initial active section
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [project.sections]);
+
+  const handleNavClick = (sectionId: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offset = 100; // offset for sticky header
+      const sectionTop = section.offsetTop - offset;
+      window.scrollTo({
+        top: sectionTop,
+        behavior: "smooth",
+      });
+      setActiveSection(sectionId);
+    }
+  };
+
   return (
     <div className="lg:col-span-4 flex flex-col gap-8">
       <div className="sticky top-24">
@@ -29,23 +81,63 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
           </h3>
           <ul className="space-y-2 text-sm text-muted-light border-l border-gray-200 ml-1">
             {project.sections?.whatItIs && (
-              <li className="pl-4 border-l-2 border-primary -ml-[2px] text-text-light font-medium">
-                Overview
+              <li>
+                <a
+                  href="#overview"
+                  onClick={(e) => handleNavClick("overview", e)}
+                  className={`pl-4 block transition-colors ${
+                    activeSection === "overview"
+                      ? "border-l-2 border-primary -ml-[2px] text-text-light font-medium"
+                      : "hover:text-primary cursor-pointer"
+                  }`}
+                >
+                  Overview
+                </a>
               </li>
             )}
             {project.sections?.myRole && (
-              <li className="pl-4 hover:text-primary transition-colors cursor-pointer">
-                My Role
+              <li>
+                <a
+                  href="#my-role"
+                  onClick={(e) => handleNavClick("my-role", e)}
+                  className={`pl-4 block transition-colors ${
+                    activeSection === "my-role"
+                      ? "border-l-2 border-primary -ml-[2px] text-text-light font-medium"
+                      : "hover:text-primary cursor-pointer"
+                  }`}
+                >
+                  My Role
+                </a>
               </li>
             )}
             {project.sections?.constraints && (
-              <li className="pl-4 hover:text-primary transition-colors cursor-pointer">
-                Constraints
+              <li>
+                <a
+                  href="#constraints"
+                  onClick={(e) => handleNavClick("constraints", e)}
+                  className={`pl-4 block transition-colors ${
+                    activeSection === "constraints"
+                      ? "border-l-2 border-primary -ml-[2px] text-text-light font-medium"
+                      : "hover:text-primary cursor-pointer"
+                  }`}
+                >
+                  Constraints
+                </a>
               </li>
             )}
             {project.sections?.learnings && (
-              <li className="pl-4 hover:text-primary transition-colors cursor-pointer">
-                Learnings
+              <li>
+                <a
+                  href="#learnings"
+                  onClick={(e) => handleNavClick("learnings", e)}
+                  className={`pl-4 block transition-colors ${
+                    activeSection === "learnings"
+                      ? "border-l-2 border-primary -ml-[2px] text-text-light font-medium"
+                      : "hover:text-primary cursor-pointer"
+                  }`}
+                >
+                  Learnings
+                </a>
               </li>
             )}
           </ul>
@@ -54,4 +146,3 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
     </div>
   );
 }
-

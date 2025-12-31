@@ -13,7 +13,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
   return (
     <div className="lg:col-span-8 flex flex-col gap-16">
       {sections.whatItIs && (
-        <div>
+        <div id="overview">
           <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-gray-300" />
             What it is
@@ -25,7 +25,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
       )}
 
       {sections.myRole && (
-        <div>
+        <div id="my-role">
           <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-gray-300" />
             My Role
@@ -37,7 +37,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
       )}
 
       {sections.constraints && sections.constraints.length > 0 && (
-        <div>
+        <div id="constraints">
           <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-gray-300" />
             Interesting Constraints
@@ -60,7 +60,7 @@ export default function ProjectContent({ project }: ProjectContentProps) {
       )}
 
       {sections.learnings && sections.learnings.length > 0 && (
-        <div>
+        <div id="learnings">
           <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">
             <span className="w-8 h-px bg-gray-300" />
             What I Learned
