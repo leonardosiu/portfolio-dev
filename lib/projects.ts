@@ -130,7 +130,7 @@ export const projects: Project[] = [
     title: "NLP Bias Detection",
     description:
       "An NLP system for detecting bias in large-scale social datasets, built by preprocessing tens of thousands of samples and fine-tuning transformer models. I worked across data pipelines, model training, and deployment to make the system usable end-to-end.",
-    category: "Systems",
+    category: "NLP",
     tech: [
       "Python",
       "PyTorch",
@@ -198,14 +198,13 @@ export const projects: Project[] = [
         "Grad-CAM",
         "ResNet"
     ],
-    imageSrc: "/images/selected-work/grad-cam-tumor-[16-9].png",
+    imageSrc: "/images/projects/grad-cam-[16-9].png",
     imageAlt: "Grad-CAM Tumor Classification",
     longDescription: "An applied computer vision study using CNNs and ResNet models to classify brain tumors from CT and MRI scans, with Grad-CAM used to evaluate model interpretability and clinical trustworthiness.",
     role: "ML Engineer",
     timeline: "Aug 2025 - Present",
     domain: "Computer Vision / Machine Learning",
     repoUrl: "https://github.com/Rytham1/Grad-CAM-Tumor-Classification",
-    demoUrl: "https://grad-cam-tumor-classification.vercel.app/",
     sections: {
         whatItIs: "We built a two‑modal pipeline (CT and MRI) that trains CNN and ResNet classifiers and generates Grad‑CAM heatmaps to visualize what the models attend to. Datasets were cleaned, normalized per modality, and split with stratified sampling. Baselines established reliable classification performance, while transfer‑learned ResNet models pushed accuracy and F1 to near‑perfect on MRI. Grad‑CAM overlays then tested whether high confidence aligned with plausible tumor regions, revealing stronger spatial localization for MRI and highlighting CT failure modes where attention drifted toward non‑lesion areas or boundaries.",
         myRole: "I implemented the MRI CNN baseline end‑to‑end: modality‑specific preprocessing (resize to 224×224, per‑dataset normalization, channel stacking), light augmentation (flip/rotate), class‑weighted training, and stratified k‑fold cross‑validation to validate generalization. The baseline achieved high accuracy and balanced precision/recall across splits, establishing a credible reference for ResNet improvements and subsequent Grad‑CAM analysis. I also contributed to the report—curating results tables/plots, documenting metrics, and helping synthesize findings across models and modalities.",
