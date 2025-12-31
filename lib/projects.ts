@@ -4,7 +4,8 @@ export type Project = {
   description: string;
   category: string;
   tech: string[];
-  imageSrc: string;
+  imageSrc: string; // Mobile image (16:9)
+  desktopImageSrc?: string; // Desktop image (21:9), falls back to imageSrc if not provided
   imageAlt: string;
   // Detail page fields
   longDescription?: string;
@@ -47,6 +48,7 @@ export const projects: Project[] = [
       "Docker"
     ],
     imageSrc: "/images/selected-work/retinova-[16-9].png",
+    desktopImageSrc: "/images/selected-work/retinova-[21-9].png",
     imageAlt: "RetiNova",
     longDescription:
       "RetiNova is a healthcare-focused computer vision application that detects eye conditions from retinal images, designed and shipped end-to-end within a 36-hour hackathon.",
@@ -88,6 +90,7 @@ export const projects: Project[] = [
     category: "Backend",
     tech: ["Backend", "APIs", "AI Systems", "Microservices", "Mobile App"],
     imageSrc: "/images/selected-work/human-proximity-[16-9].png",
+    desktopImageSrc: "/images/selected-work/human-proximity-[21-9].png",
     imageAlt: "Human Proximity",
     longDescription: "BeesEye is a mobile-first networking platform that uses real-time systems and AI services to facilitate meaningful connections at in-person events.",
     role: "Backend & AI Systems Engineer",
@@ -148,6 +151,7 @@ export const projects: Project[] = [
       "Express.js"
     ],
     imageSrc: "/images/selected-work/meta1b-[16-9].png",
+    desktopImageSrc: "/images/selected-work/meta1b-[21-9].png",
     imageAlt: "Meta 1B",
     longDescription: "An end‑to‑end NLP system that detects demographic bias in large social datasets by preprocessing tens of thousands of samples and fine‑tuning transformer models for reliable, actionable signals.",
     role: "ML Engineer",
@@ -199,6 +203,7 @@ export const projects: Project[] = [
         "ResNet"
     ],
     imageSrc: "/images/projects/grad-cam-[16-9].png",
+    desktopImageSrc: "/images/projects/grad-cam-[21-9].png",
     imageAlt: "Grad-CAM Tumor Classification",
     longDescription: "An applied computer vision study using CNNs and ResNet models to classify brain tumors from CT and MRI scans, with Grad-CAM used to evaluate model interpretability and clinical trustworthiness.",
     role: "ML Engineer",

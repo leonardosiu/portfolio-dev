@@ -41,6 +41,7 @@ export default function ProjectsGrid() {
             category={project.category}
             tech={project.tech}
             imageSrc={project.imageSrc}
+            desktopImageSrc={project.desktopImageSrc}
             imageAlt={project.imageAlt}
             href={`/projects/${project.id}`}
           />
