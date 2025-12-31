@@ -78,7 +78,7 @@ export const projects: Project[] = [
       ],
     },
     previousProject: "vortex-engine",
-    nextProject: "triage-protocol",
+    nextProject: "human-proximity",
   },
   {
     id: "human-proximity",
@@ -89,6 +89,41 @@ export const projects: Project[] = [
     tech: ["Backend", "APIs", "AI Systems", "Microservices", "Mobile App"],
     imageSrc: "/images/selected-work/human-proximity-[16-9].png",
     imageAlt: "Human Proximity",
+    longDescription: "BeesEye is a mobile-first networking platform that uses real-time systems and AI services to facilitate meaningful connections at in-person events.",
+    role: "Backend & AI Systems Engineer",
+    timeline: "Aug 2025 - Present",
+    domain: "Social Networking / AI",
+    demoUrl: "",
+    sections: {
+        whatItIs: "BeesEye is an in-progress mobile application developed at Human Proximity that focuses on enabling real-time, AI-assisted networking during live events. The platform integrates mobile clients with backend services and AI-driven workflows to support dynamic, context-aware interactions between users. Due to the project’s active development status, specific product details and algorithms are not publicly disclosed.",
+        myRole: "I worked as a backend and AI systems engineer, owning the design and implementation of core service infrastructure that powers the application. My responsibilities included building the backend API layer that interfaces with mobile clients, designing service boundaries between application logic and AI components, and implementing AI-facing microservices that could be reliably invoked from production workflows. I focused on ensuring that the system could support real-time interactions while remaining modular and extensible as product requirements evolved. In addition to backend ownership, I collaborated closely with frontend and product teams to define API contracts, align data models, and ensure that system behavior remained predictable under live usage conditions.",
+        constraints: [
+            {
+                number: "01",
+                text: "Cross‑platform consistency: ensure responsive, smooth UI/UX across iOS and Android with predictable flows and minimal friction."
+            },
+            {
+                number: "02",
+                text: "Event onboarding flow: joining an event must be intuitive and non‑disruptive, with clear steps."
+            },
+            {
+                number: "03",
+                text: "AI-assisted matchmaking: the system needs to dynamically suggest connections based on user profiles, networking goals, and event context."
+            },
+            {
+                number: "04",
+                text: "Real‑time scale: support 100+ concurrent attendees with simultaneous matching and low‑latency updates."
+            }
+        ],
+        learnings: [
+            "Multi‑provider authentication should feel seamless: align identity flows across email/password, Sign in with Apple, and LinkedIn on iOS and Android.",
+            "Load testing informs reality: use Locust to validate 300+ concurrent attendees to capture latency, throughput, response times, and failure modes before live events.",
+            "Context-aware matchmaking requires dynamic data: store event metadata, user profiles, and real‑time interaction history to personalize matches.",
+            "Event‑driven pipelines scale cleanly: use Firebase Cloud Functions and database triggers to orchestrate matching as decoupled, idempotent handlers with retries and observability."
+        ]
+    },
+    previousProject: "retinova",
+    nextProject: "nlp-bias-detection",
   },
   {
     id: "nlp-bias-detection",
@@ -97,30 +132,110 @@ export const projects: Project[] = [
       "An NLP system for detecting bias in large-scale social datasets, built by preprocessing tens of thousands of samples and fine-tuning transformer models. I worked across data pipelines, model training, and deployment to make the system usable end-to-end.",
     category: "Systems",
     tech: [
-      "NLP",
-      "Applied AI",
-      "Data Pipelines",
-      "Model Deployment",
-      "ML Systems",
+      "Python",
+      "PyTorch",
+      "scikit-learn",
+      "pandas",
+      "numpy",
+      "matplotlib",
+      "seaborn",
+      "Transformers",
+      "Weights & Biases",
+      "Vercel",
+      "Docker",
+      "FastAPI",
+      "Node.js",
+      "Express.js"
     ],
     imageSrc: "/images/selected-work/meta1b-[16-9].png",
     imageAlt: "Meta 1B",
+    longDescription: "An end‑to‑end NLP system that detects demographic bias in large social datasets by preprocessing tens of thousands of samples and fine‑tuning transformer models for reliable, actionable signals.",
+    role: "ML Engineer",
+    timeline: "Aug 2025 - Present",
+    domain: "NLP / AI",
+    repoUrl: "https://github.com/Rytham1/Meta-NLP-Bias",
+    demoUrl: "https://nlp-bias-detection.vercel.app/",
+    sections: {
+        whatItIs: "This project investigates how bias present in real-world text datasets influences language model behavior. Using the RedditBias dataset, we built a pipeline that cleans noisy social data, engineers bias-aware features, and fine-tunes a transformer-based classifier (BERT) to identify biased content. The goal was not just model performance, but understanding where bias emerges, how it manifests, and how reliably it can be detected.",
+        myRole: "I led data preprocessing and exploration to make the dataset usable and trustworthy: addressing class imbalance, cleaning and standardizing text, engineering features, and handling unique characters via regex. I also instrumented runs with Weights & Biases to handle hyperparameter tuning and model tracking. This involved tweaking hyperparameters like learning rate, batch size, learning rate scheduler, weight decay, while adding dropout for early stopping. The tuning was pivotal: the fine‑tuned model initially overfit with validation loss >150% despite good precision/recall/F1/accuracy. Through disciplined tuning and run tracking, we reduced validation loss to ~45% while maintaining or improving core metrics. I additionally helped implement a lightweight inference service so users could interact with the model via the project website.",
+        constraints: [
+            {
+                number: "01",
+                text: "Real-world data noise: Reddit comments contained inconsistent formatting, ambiguous labels, and missing values.",
+            },
+            {
+                number: "02",
+                text: "Moderate class imbalance: More biased samples than non-biased, requiring careful evaluation."
+            },
+            {
+                number: "03",
+                text: "Overfitting risk: Early training runs showed divergence between training and validation loss."
+            }
+        ],
+        learnings: [
+            "Data quality drives outcomes: robust cleaning, label hygiene, and stratified splits matter as much as model choice.",
+            "Tune for generalization: hyperparameters and regularization are levers to reduce validation loss without sacrificing core metrics.",
+            "Ship the interface: a lightweight inference service with clear contracts turns models into usable products."
+        ]
+    },
+    previousProject: "human-proximity",
+    nextProject: "grad-cam-tumor",
   },
   {
     id: "grad-cam-tumor",
     title: "Grad-CAM Tumor Classification",
-    description:
-      "A computer vision project exploring tumor classification in medical imaging, with a focus on interpretability using Grad-CAM visualizations. Emphasized model evaluation, explainability, and responsible ML decision-making.",
-    category: "Systems",
+    description: "An applied computer vision study using CNNs and ResNet models to classify brain tumors from CT and MRI scans, with Grad-CAM used to evaluate model interpretability and clinical trustworthiness. This project was a final project for the CS 184A Course at UC Irvine.",
+    category: "Computer Vision / Machine Learning",
     tech: [
-      "Computer Vision",
-      "Machine Learning",
-      "Healthcare",
-      "Interpretability",
+        "Python",
+        "PyTorch",
+        "torchvision",
+        "scikit-learn",
+        "pandas",
+        "numpy",
+        "matplotlib",
+        "seaborn",
+        "Grad-CAM",
+        "ResNet"
     ],
-    imageSrc: "/images/projects/grad-cam.png",
+    imageSrc: "/images/selected-work/grad-cam-tumor-[16-9].png",
     imageAlt: "Grad-CAM Tumor Classification",
-  },
+    longDescription: "An applied computer vision study using CNNs and ResNet models to classify brain tumors from CT and MRI scans, with Grad-CAM used to evaluate model interpretability and clinical trustworthiness.",
+    role: "ML Engineer",
+    timeline: "Aug 2025 - Present",
+    domain: "Computer Vision / Machine Learning",
+    repoUrl: "https://github.com/Rytham1/Grad-CAM-Tumor-Classification",
+    demoUrl: "https://grad-cam-tumor-classification.vercel.app/",
+    sections: {
+        whatItIs: "We built a two‑modal pipeline (CT and MRI) that trains CNN and ResNet classifiers and generates Grad‑CAM heatmaps to visualize what the models attend to. Datasets were cleaned, normalized per modality, and split with stratified sampling. Baselines established reliable classification performance, while transfer‑learned ResNet models pushed accuracy and F1 to near‑perfect on MRI. Grad‑CAM overlays then tested whether high confidence aligned with plausible tumor regions, revealing stronger spatial localization for MRI and highlighting CT failure modes where attention drifted toward non‑lesion areas or boundaries.",
+        myRole: "I implemented the MRI CNN baseline end‑to‑end: modality‑specific preprocessing (resize to 224×224, per‑dataset normalization, channel stacking), light augmentation (flip/rotate), class‑weighted training, and stratified k‑fold cross‑validation to validate generalization. The baseline achieved high accuracy and balanced precision/recall across splits, establishing a credible reference for ResNet improvements and subsequent Grad‑CAM analysis. I also contributed to the report—curating results tables/plots, documenting metrics, and helping synthesize findings across models and modalities.",
+        constraints: [
+            {
+                number: "01",
+                text: "Modality differences: MRI and CT have distinct resolution, contrast, and texture distributions; preprocessing and normalization must be per‑modality to avoid spurious signals.",
+            },
+            {
+                number: "02",
+                text: "Class balance and sampling: moderate imbalance (especially in MRI) requires stratified splits and class‑aware training to keep recall strong and reduce false negatives."
+            },
+            {
+                number: "03",
+                text: "CT artifacts and text: CT variability and corner annotations can bias attention. Consequently filters were applied toreduce text visibility, but attention drift still appears in some models."
+            },
+            {
+                number: "04",
+                text: "Interpretability gap: strong quantitative metrics do not guarantee clinically meaningful attention. Grad‑CAM must correlate with confidence and localize plausible regions."
+            }
+        ],
+        learnings: [
+            "Data quality drives outcomes: per‑modality normalization, label hygiene, and stratified splits matter as much as architecture.",
+            "Baselines before complexity: a well‑regularized CNN baseline establishes truth anchors and reveals where transfer learning adds value.",
+            "Evaluate what you ship: pair accuracy/F1 with Grad‑CAM alignment as confidence without localized attention is a warning in medical contexts.",
+            "Cross‑validation builds trust: stratified k‑fold with consistent preprocessing makes results reproducible and interpretations defensible."
+        ]
+    },
+    previousProject: "nlp-bias-detection",
+  }
 ];
 
 export function getProjectById(id: string): Project | undefined {
