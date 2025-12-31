@@ -144,30 +144,60 @@ export const professionalExperiences: Experience[] = [
 
 export const leadershipExperiences: Experience[] = [
   {
-    title: "President",
-    company: "Computer Science Society",
-    period: "2019 — 2021",
-    category: "Community Lead",
-    description:
-      "Fostering a collaborative learning environment for 500+ computer science undergraduates.",
-    highlights: [
-      'Organized "Hack the Valley", a 36-hour hackathon with 300+ participants, securing $20k in corporate sponsorship.',
-      "Launched a peer mentorship program connecting 1st-year students with senior industry interns.",
-    ],
-    technologies: [],
-  },
-  {
-    title: "Embedded Systems Lead",
-    company: "University Robotics Team",
-    period: "2018 — 2020",
+    title: "Software Lead",
+    company: "CareTech @ UCI",
+    period: "Oct 2025 - Present",
     category: "Embedded Roots",
     description:
-      "Designing autonomous navigation firmware for disaster relief scenarios.",
+      "Student health-tech initiative building AI-powered tools for brain health and nutrition.",
     highlights: [
-      "Developed real-time sensor fusion algorithms in C++ for autonomous path planning on ARM Cortex-M microcontrollers.",
-      "Led a team of 5 mechanical and electrical engineering students to place 2nd in the National Design Competition.",
+      "Co-leading a 10+ person engineering team, defining technical direction and breaking down product requirements into shippable milestones.",
+      "Architecting an AI-assisted food logging system combining real-time object detection, user feedback loops, and personalized health insights.",
+      "Balancing product vision with execution to guide technical decisions across frontend UX, backend services, and applied ML tradeoffs."
     ],
-    technologies: ["C++", "FreeRTOS"],
+    technologies: ["Technical Leadership", "Applied AI", "Health Tech"],
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "Commit the Change @ UCI (CTC)",
+    period: "Oct 2025 - Present",
+    category: "Full-Stack Development",
+    description:
+      "Empowering nonprofits with reliable, maintainable software built by UCI designers and developers.",
+    highlights: [
+      'Collaborating with 11+ engineers and 4+ designers to deliver a full-stack platform for a nonprofit legal services organization.',
+      "Translating design mockups into production features while designing relational schemas and backend APIs to support complex workflows.",
+      "Working in an Agile, sprint-based environment, contributing across frontend, backend, and database layers as the product evolves."
+    ],
+    technologies: ["Full-Stack Development", "Agile", "Nonprofit"],
+  },
+  {
+    title: "Web Developer",
+    company: "UCI CanSat",
+    period: "Jul 2024 - Present",
+    category: "Web Development",
+    description:
+      "Interdisciplinary aerospace team competing in national rocketry competitions.",
+    highlights: [
+      "Rebuilt the team’s public website to improve information flow, performance, and visual storytelling.",
+      "Integrated the LinkedIn Community Management API to surface live team updates, significantly increasing site engagement.",
+      "Introducing Sanity CMS to decouple content from code, enabling non-developers to manage updates independently."
+    ],
+    technologies: ["Frontend", "CMS", "API Integration"],
+  },
+  {
+    title: "Marketing Organizer",
+    company: "VenusHacks",
+    period: "Nov 2024 - May 2025",
+    category: "Web Development",
+    description:
+      "Student-run hackathon focused on inclusion and community building.",
+    highlights: [
+      "Collaborated with design team to build and maintain the hackathon website during active application cycles.",
+      "Helped drive participation through visual storytelling, capturing event and organizer photography used across web and social platforms.",
+      "Supported marketing and logistics efforts that shaped the overall participant experience."
+    ],
+    technologies: ["Frontend", "CMS", "Photography"],
   },
 ];
 
