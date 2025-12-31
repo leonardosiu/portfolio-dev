@@ -42,7 +42,7 @@ export default function Experience() {
           <ExperienceTimeline
             sectionId="leadership"
             sectionTitle="Student Leadership & Organizations"
-            sectionDescription="Fostering community growth and technical excellence through student-led initiatives."
+            sectionDescription="Student-led engineering and leadership roles focused on building real products, mentoring peers, and applying software to social impact."
             experiences={leadershipExperiences}
             isLastSection={true}
           />
