@@ -35,7 +35,7 @@ export default function ExperienceTimeline({
   isLastSection = false,
 }: ExperienceTimelineProps) {
   return (
-    <div className="flex-1 max-w-7xl mx-auto w-full">
+    <div className="flex-1 max-w-7xl mx-auto w-full" id={`timeline-${sectionId}`}>
       <ExperienceSection
         id={sectionId}
         title={sectionTitle}

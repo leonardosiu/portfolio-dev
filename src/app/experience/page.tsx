@@ -1,10 +1,10 @@
 import ExperienceHero from "@/components/experience/ExperienceHero";
 import ExperienceTimeline from "@/components/experience/ExperienceTimeline";
+import ScrollToSection from "@/components/experience/ScrollToSection";
 import {
   professionalExperiences,
   leadershipExperiences,
 } from "@/lib/experience";
-import { ChevronDown } from "lucide-react";
 
 export default function Experience() {
   return (
@@ -26,15 +26,11 @@ export default function Experience() {
             <div className="h-12 w-px bg-gradient-to-b from-gray-200/80 to-transparent"></div>
           </div>
           <div className="pt-6 md:pl-2">
-            <a
-              className="inline-flex items-center gap-2 group"
-              href="#leadership"
-            >
-              <span className="text-xs font-mono text-muted-light uppercase tracking-widest group-hover:text-indigo-500 transition-colors">
-                Next: Student Leadership
-              </span>
-              <ChevronDown className="w-4 h-4 text-muted-light group-hover:text-indigo-500 group-hover:translate-y-1 transition-all" />
-            </a>
+            <ScrollToSection
+              targetId="leadership"
+              label="Next: Student Leadership"
+              direction="down"
+            />
           </div>
         </div>
 
@@ -46,6 +42,21 @@ export default function Experience() {
             experiences={leadershipExperiences}
             isLastSection={true}
           />
+        </div>
+
+        {/* Navigation link back to professional section */}
+        <div className="relative grid grid-cols-1 md:grid-cols-[160px_48px_1fr] gap-0 mt-6">
+          <div className="hidden md:block"></div>
+          <div className="hidden md:flex flex-col items-center">
+            <div className="h-12 w-px bg-gradient-to-b from-transparent to-gray-200/80"></div>
+          </div>
+          <div className="pt-6 md:pl-2">
+            <ScrollToSection
+              targetId="professional"
+              label="Back: Professional & Industry"
+              direction="up"
+            />
+          </div>
         </div>
       </section>
     </div>
