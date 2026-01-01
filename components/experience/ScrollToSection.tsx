@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
 type ScrollToSectionProps = {
@@ -35,10 +36,11 @@ export default function ScrollToSection({
   const Icon = direction === "up" ? ChevronUp : ChevronDown;
 
   return (
-    <a
+    <Link
       className="inline-flex items-center gap-2 group"
       href={`#${targetId}`}
       onClick={handleClick}
+      scroll={false}
     >
       <span className="text-xs font-mono text-muted-light uppercase tracking-widest group-hover:text-indigo-500 transition-colors">
         {label}
@@ -50,7 +52,7 @@ export default function ScrollToSection({
             : "group-hover:translate-y-1"
         }`}
       />
-    </a>
+    </Link>
   );
 }
 

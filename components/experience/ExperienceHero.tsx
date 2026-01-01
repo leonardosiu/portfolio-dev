@@ -5,7 +5,7 @@ export default function ExperienceHero() {
       <div className="flex items-center gap-3 mb-6">
         <div className="h-px w-8 bg-indigo-500"></div>
         <span className="font-mono text-sm text-indigo-600 font-medium tracking-wide uppercase">
-          2018 — Present
+          2024 — Present
         </span>
       </div>
       <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight mb-8 text-text-light">
