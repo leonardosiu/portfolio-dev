@@ -77,3 +77,34 @@ body {
   writing-mode: vertical-rl;
   text-orientation: mixed;
 }
+
+/* Custom list bullets */
+.custom-list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+}
+
+.dark .custom-list li::before {
+  background-color: #4b5563;
+}
+
+.group:hover .custom-list li::before {
+  background-color: #6366f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
