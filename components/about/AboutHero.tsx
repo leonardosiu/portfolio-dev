@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { MapPin, Clock, Camera } from "lucide-react";
+import { MapPin, Camera } from "lucide-react";
+import TimestampPST from "./PacificTime";
 
 export default function AboutHero() {
   return (
-    <section className="px-6 md:px-12 pt-24 md:pt-32 pb-12 max-w-6xl mx-auto relative">
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo-100/40 to-purple-100/40 rounded-full blur-[100px] pointer-events-none -z-10 translate-x-1/4 -translate-y-1/4"></div>
-      
+    <section className="px-6 md:px-12 pt-24 md:pt-32 pb-12 max-w-7xl mx-auto relative">      
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 relative z-10">
           <div className="flex items-center gap-4 text-xs font-mono text-muted-light mb-6 tracking-wide uppercase opacity-80">
@@ -14,10 +13,7 @@ export default function AboutHero() {
               San Francisco, CA
             </span>
             <span className="w-1 h-1 rounded-full bg-gray-300"></span>
-            <span className="flex items-center gap-1.5">
-              <Clock className="w-4 h-4" />
-              UTC-8
-            </span>
+            <TimestampPST />
           </div>
           
           <h1 className="font-serif text-5xl md:text-7xl leading-tight mb-6 text-text-light">
@@ -25,23 +21,24 @@ export default function AboutHero() {
           </h1>
           
           <p className="font-sans text-xl md:text-2xl text-muted-light font-light leading-relaxed mb-8">
-            I build systems—and I care about the{" "}
-            <span className="text-text-light font-normal">people and stories</span> around them.
+            Building thoughtful software across backend, applied ML, and product, grounded in  {" "}
+            <span className="text-text-light font-normal">people and context</span>.
           </p>
           
           <div className="text-lg leading-relaxed text-muted-light space-y-6 font-light">
             <p>
-              Hey, I'm Leo. While my day job involves wrangling distributed
-              infrastructure and optimizing latency, my off-hours are
-              decidedly analog. I believe the best engineering comes from
-              understanding the human context, not just the technical
+              Hey, I'm Leo, a third-year CS major at UCI. I build 
+              end-to-end software across backend and applied ML, with
+              a focus on how it helps people. I believe the best engineering 
+              comes from understanding the human context, not just the technical
               constraints.
             </p>
             <p>
-              When I'm away from the terminal, you'll find me capturing
-              candid moments with my Fujifilm X100V, mediating disputes
-              between my two cats (Udon and Ramen), or attempting to master
-              the strategic chaos of Mahjong.
+              When I'm away from the terminal, I slow things down.
+              I like taking photos with my Fujifilm X100V, playing sports
+              when I'm convinced to play, mediating disputes
+              between my two cats (Udon and Ramen), and attempting to
+              not give away the win in Mahjong.
             </p>
           </div>
         </div>

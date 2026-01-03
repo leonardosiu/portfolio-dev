@@ -2,7 +2,7 @@ import { Mountain, Camera } from "lucide-react";
 
 export default function CreativePursuits() {
   return (
-    <section className="px-6 md:px-12 py-12 md:py-20 max-w-6xl mx-auto">
+    <section className="px-6 md:px-12 py-12 md:py-20 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8 mb-12">
         <h2 className="font-serif text-3xl md:text-4xl text-text-light">
           Creative Pursuits

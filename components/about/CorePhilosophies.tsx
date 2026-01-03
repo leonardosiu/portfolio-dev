@@ -1,26 +1,26 @@
-import { Settings, Network, Brain } from "lucide-react";
+import { HeartHandshake, Gauge, Brain } from "lucide-react";
 
 export default function CorePhilosophies() {
   const philosophies = [
     {
-      icon: Settings,
-      title: "Craftsmanship & Clarity",
-      description: "Building systems that are robust, maintainable, and remarkably clear in their intent, favoring long-term stability over quick fixes.",
+      icon: HeartHandshake,
+      title: "Human-Centered Engineering",
+      description: "I try to design systems and workflows around real people first. Metrics matter, but they come second to usability, clarity, and how the product actually feels to use.",
     },
     {
-      icon: Network,
-      title: "Scalable Systems",
-      description: "Designing infrastructure that grows gracefully with demand, ensuring resilience and performance at every order of magnitude.",
+      icon: Gauge,
+      title: "Performance with Purpose",
+      description: "I care about performance where users can feel it. I focus on reducing latency and complexity when it improves experience, not just to optimize for its own sake.",
     },
     {
       icon: Brain,
       title: "Ethical AI",
-      description: "Developing intelligent tools that empower human creativity and decision-making, ensuring technology serves people, not just algorithms.",
+      description: "I believe in building intelligent tools that empower human creativity and decision-making, ensuring technology serves people, not just algorithms.",
     },
   ];
 
   return (
-    <section className="px-6 md:px-12 py-12 md:py-20 max-w-6xl mx-auto">
+    <section className="px-6 md:px-12 py-12 md:py-20 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8 mb-12">
         <h2 className="font-serif text-3xl md:text-4xl text-text-light">
           Core Philosophies

@@ -3,7 +3,7 @@ import { Camera } from "lucide-react";
 
 export default function AboutPhilosophy() {
   return (
-    <section className="px-6 md:px-12 py-16 max-w-5xl mx-auto">
+    <section className="px-6 md:px-12 py-16 max-w-7xl mx-auto">
       <div className="relative bg-white rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100 overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-50 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
         

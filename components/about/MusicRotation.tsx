@@ -33,7 +33,7 @@ export default function MusicRotation() {
   ];
 
   return (
-    <section className="px-6 md:px-12 py-12 max-w-6xl mx-auto">
+    <section className="px-6 md:px-12 py-12 max-w-7xl mx-auto">
       <div className="flex items-center gap-3 mb-8">
         <Headphones className="w-5 h-5 text-indigo-500" />
         <h3 className="font-mono text-sm font-bold uppercase tracking-widest text-muted-light">

@@ -19,7 +19,7 @@ export default function LeoTwinSection() {
 
   return (
     <section
-      className="px-6 md:px-12 py-24 max-w-5xl mx-auto border-t border-gray-100 relative overflow-hidden"
+      className="px-6 md:px-12 py-24 max-w-7xl mx-auto border-t border-gray-100 relative overflow-hidden"
       id="leotwin"
     >
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/15 rounded-full blur-[160px] pointer-events-none"></div>
