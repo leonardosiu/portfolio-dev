@@ -7,7 +7,7 @@ import Divider from "@/components/layout/Divider";
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col gap-32 py-24 bg-background-light">
+      <div className="flex flex-col gap-12 md:gap-32 py-0 md:py-24 bg-background-light">
         <Hero />
 
         <Divider />
