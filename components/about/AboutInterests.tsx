@@ -1,4 +1,4 @@
-import { Compass, Cloud, Heart, Camera, UtensilsCrossed, ScanEye, Headphones, Cat, Grid3x3, Target, AlignLeft, BadgeCheck } from "lucide-react";
+import { Compass, Cloud, Heart, Camera, UtensilsCrossed, ScanEye, Headphones, Cat, Network, Target, AlignLeft, BadgeCheck } from "lucide-react";
 
 export default function AboutInterests() {
   const interests = [
@@ -7,17 +7,18 @@ export default function AboutInterests() {
       title: "What I'm Exploring",
       items: [
         { icon: Camera, text: "Fujifilm film simulations and visual storytelling" },
-        { icon: UtensilsCrossed, text: "Culinary competitions and cooking shows like “Culinary Class Wars”" },
         { icon: ScanEye, text: "Real-time object detection and applied computer vision (YOLO)" },
+        { icon: Network, text: "Computer network architectures and protocols"}
       ],
     },
     {
       icon: Cloud,
       title: "Outside of Work",
       items: [
-        { icon: Headphones, text: "Kpop enthusiast: aespa, NewJeans, and Hearts2Heart" },
         { icon: Cat, text: "Cat dad to Udon & Ramen" },
-        { icon: Grid3x3, text: "Occasional Mahjong strategist" },
+        { icon: Headphones, text: "Kpop enthusiast: aespa, NewJeans, and Hearts2Heart" },
+        { icon: UtensilsCrossed, text: "Culinary competitions and cooking shows like “Culinary Class Wars”" },
+        // { icon: Grid3x3, text: "Occasional Mahjong strategist" },
       ],
     },
     {

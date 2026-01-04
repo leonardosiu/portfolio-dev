@@ -44,23 +44,23 @@ export default function AboutHero() {
         </div>
         
         <div className="md:col-span-5 relative hidden md:block">
-          <div className="relative rounded-2xl overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 shadow-xl border-4 border-white bg-white group">
+          <div className="relative rounded-2xl hover:rounded-2xl overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500 shadow-xl border-4 border-white bg-white group">
             <Image
               alt="Leo with camera"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPozZ4EFD7Dpw-4OyJ0mV79UzbQ5AIMs23ublPhDsu7O4n3VE_lmm0pC1CZNOi9ja4UB64qsm44VRb9v59uEyOBJHBANElQZBHFub3xU8oGHVtTGv8pMVeMzCNmq4QhH_2pyDiCXx-UIWgW2kFCh9IoY-Ue-4l1P12TT4bPKmwvwDs3iqhsPUYgybj79JOVY9nrn1vwvCMdcoRWtkI-a9-dXqnTu1_L9OyJRsMk3BFzFdYxtnjy7-OBs6Naau2mYnDc5teM5LJLjit"
+              src="/images/about/cat-dad.png"
               width={500}
               height={600}
-              className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              className="w-full h-auto object-cover rounded-2xl hover:rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <p className="text-xs font-mono text-center">
-                Shot on Fujifilm X100V
+                Shot with Dazz Cam
               </p>
             </div>
           </div>
-          <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-surface-light rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-20 border border-gray-100">
+          {/* <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-surface-light rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-20 border border-gray-100">
             <Camera className="w-8 h-8 text-indigo-500 animate-pulse" />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
