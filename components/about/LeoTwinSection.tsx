@@ -4,15 +4,15 @@ import { ArrowRight, MessageSquare } from "lucide-react";
 export default function LeoTwinSection() {
   const prompts = [
     {
-      text: "How do you approach backend system design?",
+      text: "Tell me about some of your projects.",
       href: "https://twin.leo.dev?q=How%20do%20you%20approach%20backend%20system%20design?",
     },
     {
-      text: "Explain engineering tradeoffs in Vortex",
+      text: "What kind of engineer are you trying to become?",
       href: "https://twin.leo.dev?q=Explain%20engineering%20tradeoffs%20in%20Vortex",
     },
     {
-      text: "What is your philosophy on distributed systems?",
+      text: "What are you learning right now?",
       href: "https://twin.leo.dev?q=What%20is%20your%20philosophy%20on%20distributed%20systems?",
     },
   ];
@@ -44,9 +44,9 @@ export default function LeoTwinSection() {
           </h2>
           
           <p className="text-lg text-muted-light leading-relaxed font-light max-w-xl">
-            LeoTwin is a digital twin trained on my projects and writing.
-            Ask about systems, products, and engineering tradeoffs—answers
-            reflect how I reason, not just model output.
+            LeosTwin is a digital twin trained on my projects, writing, and experiences.
+            Ask about my work, how I think about systems and products, or what I'm building toward.
+            Responses reflect how I reason, not just what I've done.
           </p>
           
           <div className="pt-4">

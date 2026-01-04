@@ -13,26 +13,26 @@ export default function ConnectSection() {
       </h2>
       
       <p className="text-lg text-muted-light font-light mb-10 max-w-xl mx-auto leading-relaxed">
-        I'm always open to discussing distributed systems, photography, or
+        I'm always open to discussing artifical intelligence, photography, basketball, or
         swapping Mahjong strategies. Drop me a line.
       </p>
       
       <div className="flex flex-wrap justify-center gap-4">
         <Link
-          href="mailto:hello@leo.dev"
+          href="mailto:@leonardo.siu.dev@gmail.com"
           className="px-8 py-3 rounded-full bg-text-light text-background-light font-semibold hover:bg-indigo-500 hover:text-white transition-colors duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform"
         >
           Email Me
         </Link>
         <Link
-          href="#"
+          href="https://github.com/baller7215"
           className="px-8 py-3 rounded-full bg-surface-light border border-gray-200 text-text-light font-medium hover:border-indigo-500 hover:text-indigo-500 transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5"
         >
           <Code className="w-5 h-5" />
           GitHub
         </Link>
         <Link
-          href="#"
+          href="https://linkedin.com/in/leonardo-siu"
           className="px-8 py-3 rounded-full bg-surface-light border border-gray-200 text-text-light font-medium hover:border-indigo-500 hover:text-indigo-500 transition-all duration-300 flex items-center gap-2 hover:-translate-y-0.5"
         >
           <Briefcase className="w-5 h-5" />

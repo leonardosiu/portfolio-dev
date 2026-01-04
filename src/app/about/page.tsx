@@ -15,7 +15,7 @@ export default function About() {
       <AboutInterests />
       <CreativePursuits />
       <MusicRotation />
-      <AboutPhilosophy />
+      {/* <AboutPhilosophy /> */}
       <LeoTwinSection />
       <ConnectSection />
     </div>
