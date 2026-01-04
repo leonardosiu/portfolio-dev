@@ -130,3 +130,134 @@ html {
 .group:hover .cd-flip {
   transform: rotateY(180deg);
 }
+
+/* Alternative CD animations - swap the class name in MusicRotation.tsx */
+
+/* 1. Continuous spinning (like a turntable) */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.group:hover .cd-spin {
+  animation: spin 3s linear infinite;
+}
+
+/* 2. Flip with scale (more dramatic) */
+.group:hover .cd-flip-scale {
+  transform: rotateY(180deg) scale(1.05);
+}
+
+/* 3. 3D tilt effect (CD at an angle) */
+.group:hover .cd-tilt {
+  transform: rotateY(180deg) rotateX(10deg) rotateZ(-5deg);
+}
+
+/* 4. Zoom and rotate (dramatic entrance) */
+.group:hover .cd-zoom-rotate {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+/* 5. Slide reveal (cover slides away) */
+.cd-slide-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-slide-cover {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .cd-slide-cover {
+  transform: translateX(-100%);
+}
+
+.cd-slide-album {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover .cd-slide-album {
+  transform: translateX(0);
+}
+
+/* 6. Fade transition (smooth crossfade) */
+.cd-fade-cover {
+  transition: opacity 0.5s ease;
+}
+
+.group:hover .cd-fade-cover {
+  opacity: 0;
+}
+
+.cd-fade-album {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.group:hover .cd-fade-album {
+  opacity: 1;
+}
+
+/* 7. Radial reveal (from center like opening a case) */
+@keyframes radial-reveal {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(100% at 50% 50%);
+  }
+}
+
+.group:hover .cd-radial {
+  animation: radial-reveal 0.8s ease-out forwards;
+}
+
+/* 8. Glow pulse (CD reflecting light) */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.6);
+  }
+}
+
+.group:hover .cd-glow {
+  animation: glow-pulse 2s ease-in-out infinite;
+  transform: rotateY(180deg);
+}
+
+/* 9. Stacked peel (multiple layers) */
+.cd-stacked {
+  position: relative;
+}
+
+.cd-stacked-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease, z-index 0s 0.25s;
+}
+
+.group:hover .cd-stacked-layer:nth-child(1) {
+  transform: rotateY(180deg) translateZ(20px);
+  z-index: 1;
+}
+
+.group:hover .cd-stacked-layer:nth-child(2) {
+  transform: rotateY(180deg) translateZ(10px);
+  z-index: 2;
+  transition-delay: 0.1s;
+}
