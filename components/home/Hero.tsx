@@ -1,3 +1,7 @@
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
+import { cn } from "@/lib/utils";
+import { ArrowRightIcon } from "lucide-react";
+
 export default function Hero() {
     return (
       <section className="space-y-8 px-12 py-8 max-w-7xl w-full mx-auto">
@@ -24,14 +28,17 @@ export default function Hero() {
             </p>
             {/* open to new roles and location badge */}
             <div className="mt-8 flex gap-4">
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 tex-xs font-mono border border-green-200">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                OPEN TO NEW ROLES
-              </span>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-200 text-gray-600 tex-xs font-mono border border-gray-300">
-                📍
-                OPEN TO NEW LOCATIONS
-              </span>
+              <div
+                className={cn(
+                  "group rounded-full border border-green-200 bg-green-100 text-base transition-all ease-in hover:cursor-pointer hover:bg-green-200"
+                )}
+              >
+                <AnimatedShinyText className="font-mono text-green-700 inline-flex gap-2 items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:text-neutral-400">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                  <span>Open to new roles</span>
+                  {/* <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
+                </AnimatedShinyText>
+              </div>
             </div>
           </div>
 
