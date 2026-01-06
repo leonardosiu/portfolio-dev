@@ -19,7 +19,7 @@ export default function SelectedWork() {
               desktopSrc="/images/selected-work/human-proximity-[21-9].png"
               mobileSrc="/images/selected-work/human-proximity-[16-9].png"
               alt="Human Proximity"
-              href="/projects#human-proximity"
+              href="/projects/human-proximity"
             />
             {/* content */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
@@ -48,7 +48,7 @@ export default function SelectedWork() {
               desktopSrc="/images/selected-work/retinova-[21-9].png"
               mobileSrc="/images/selected-work/retinova-[16-9].png"
               alt="RetiNova"
-              href="https://devpost.com/software/retinova"
+              href="/projects/retinova"
             />
             {/* content */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
@@ -77,7 +77,7 @@ export default function SelectedWork() {
               desktopSrc="/images/selected-work/meta1b-[21-9].png"
               mobileSrc="/images/selected-work/meta1b-[16-9].png"
               alt="Meta 1B"
-              href="https://github.com/Rytham1/Meta-NLP-Bias"
+              href="/projects/nlp-bias-detection"
             />
             {/* content */}
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">

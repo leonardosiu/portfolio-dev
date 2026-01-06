@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { Cursor } from "@/components/motion-primitives/cursor";
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [shouldHide, setShouldHide] = useState(false);
@@ -29,18 +30,11 @@ export default function CustomCursor() {
       attributeFilter: ['class'],
     });
 
-    const updateCursor = (e: MouseEvent) => {
-      if (isMobile) return;
-      setPosition({ x: e.clientX, y: e.clientY });
-      setIsVisible(true);
-    };
-
     const handleMouseLeave = () => {
       setIsVisible(false);
     };
 
     if (!isMobile) {
-      window.addEventListener("mousemove", updateCursor);
       document.addEventListener("mouseleave", handleMouseLeave);
     }
 
@@ -48,27 +42,52 @@ export default function CustomCursor() {
     checkHideCursor();
 
     return () => {
-      window.removeEventListener("mousemove", updateCursor);
       document.removeEventListener("mouseleave", handleMouseLeave);
       window.removeEventListener("resize", checkMobile);
       observer.disconnect();
     };
   }, [isMobile]);
 
+  const handlePositionChange = () => {
+    if (!isMobile && !shouldHide) {
+      setIsVisible(true);
+    }
+  };
+
   if (isMobile) return null;
 
+  const shouldShow = isVisible && !shouldHide;
+
   return (
-    <div
-      className="fixed pointer-events-none z-[9999] mix-blend-difference transition-opacity duration-300 hidden md:block"
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: "translate(-50%, -50%)",
-        opacity: isVisible && !shouldHide ? 1 : 0,
+    <Cursor
+      className="hidden md:block z-[9999]"
+      springConfig={{
+        bounce: 0.001,
       }}
+      transition={{
+        ease: 'easeOut',
+        duration: 0.15,
+      }}
+      variants={{
+        initial: { scale: 0.3, opacity: 0 },
+        animate: { 
+          scale: shouldShow ? 1 : 0.3, 
+          opacity: shouldShow ? 1 : 0 
+        },
+        exit: { scale: 0.3, opacity: 0 },
+      }}
+      onPositionChange={handlePositionChange}
     >
-      <div className="w-6 h-6 rounded-full bg-white" />
-    </div>
+      <motion.div 
+        className="w-6 h-6 rounded-full bg-blue-500/80 mix-blend-difference"
+        animate={{
+          opacity: shouldShow ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.3,
+        }}
+      />
+    </Cursor>
   );
 }
 

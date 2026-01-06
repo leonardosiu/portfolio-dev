@@ -24,25 +24,26 @@ export default function CreativeBridge() {
 
         {/* gallery */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/** @TODO: add link to art site */}
           {/* golden gate bridge */}
           <GalleryImageHover
             src="/images/creative-bridge/golden-gate.png"
             alt="Golden Gate Bridge"
-            href="/projects#creative-bridge"
+            href="#"
             label="VIEW"
           />
           {/* creation of technology */}
           <GalleryImageHover
             src="/images/creative-bridge/creation-of-technology.png"
             alt="Creation of Technology"
-            href="/projects#creative-bridge"
+            href="#"
             label="VIEW"
           />
           {/* self portrait */}
           <GalleryImageHover
             src="/images/creative-bridge/image.png"
             alt="Self Portrait"
-            href="/projects#creative-bridge"
+            href="#"
             label="VIEW"
           />
         </div>
