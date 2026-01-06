@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { ImageHoverCursor } from "@/components/ui/image-hover-cursor";
 
 type ProjectCardProps = {
   title: string;
@@ -27,7 +30,8 @@ export function ProjectCard({
   
   const content = (
     <div className="group block bg-surface-light rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
-      <div className="h-80 overflow-hidden relative bg-gray-100">
+      <ImageHoverCursor label="View Project">
+        <div className="h-80 overflow-hidden relative bg-gray-100 md:cursor-none">
         {/* Desktop image */}
         <Image
           src={desktopSrc}
@@ -44,6 +48,7 @@ export function ProjectCard({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-light to-transparent opacity-20" />
       </div>
+      </ImageHoverCursor>
 
       <div className="p-6 md:p-8">
         <div className="flex justify-between items-start mb-3">
