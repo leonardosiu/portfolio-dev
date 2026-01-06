@@ -16,10 +16,10 @@ export default function GalleryImageHover({ src, alt, href, label = "VIEW" }: Ga
     <Link href={href} className="block relative z-0 hover:z-[9998]">
       <ImageHoverCursor label={label}>
         <div className="bg-surface-light rounded-lg p-3 transition-transform duration-500 ease-out group">
-        <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
-          <Image src={src} alt={alt} fill className="object-cover" />
+          <div className="aspect-[4/5] md:aspect-square overflow-hidden rounded-[4px] bg-gray-200 relative">
+            <Image src={src} alt={alt} fill className="object-cover" />
+          </div>
         </div>
-      </div>
       </ImageHoverCursor>
     </Link>
   );
