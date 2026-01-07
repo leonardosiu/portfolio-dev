@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -12,6 +14,13 @@ export default function MobileNavbar() {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(path);
   };
 
   return (
@@ -59,21 +68,33 @@ export default function MobileNavbar() {
           <Link
             href="/about"
             onClick={closeMenu}
-            className="hover:text-muted-light dark:hover:text-muted-dark transition-colors"
+            className={`transition-colors ${
+              isActive("/about") 
+                ? "text-foreground" 
+                : "text-muted-light dark:text-muted-dark hover:text-foreground"
+            }`}
           >
             About
           </Link>
           <Link
             href="/projects"
             onClick={closeMenu}
-            className="hover:text-muted-light dark:hover:text-muted-dark transition-colors"
+            className={`transition-colors ${
+              isActive("/projects") 
+                ? "text-foreground" 
+                : "text-muted-light dark:text-muted-dark hover:text-foreground"
+            }`}
           >
             Projects
           </Link>
           <Link
             href="/experience"
             onClick={closeMenu}
-            className="hover:text-muted-light dark:hover:text-muted-dark transition-colors"
+            className={`transition-colors ${
+              isActive("/experience") 
+                ? "text-foreground" 
+                : "text-muted-light dark:text-muted-dark hover:text-foreground"
+            }`}
           >
             Experience
           </Link>
