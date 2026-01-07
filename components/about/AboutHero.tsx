@@ -4,7 +4,7 @@ import TimestampPST from "./PacificTime";
 
 export default function AboutHero() {
   return (
-    <section className="px-6 md:px-12 pt-24 md:pt-32 pb-12 max-w-7xl mx-auto relative">      
+    <section className="px-6 md:px-12 pt-12 md:pt-32 pb-12 max-w-7xl mx-auto relative">      
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 relative z-10">
           <div className="flex items-center gap-4 text-xs font-mono text-muted-light mb-6 tracking-wide uppercase opacity-80">
