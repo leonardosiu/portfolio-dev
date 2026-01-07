@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RotatingText from "../ui/rotating-text";
 
 export default function Sidebar() {
   return (
@@ -6,7 +7,18 @@ export default function Sidebar() {
       {/* Top: Logo/Text aligned with navbar */}
       <div className="flex flex-col items-center pt-8">
         <div className="writing-vertical-rl text-sm font-bold uppercase tracking-wider text-foreground">
-          SYSTEM ARCHITECT
+          <RotatingText
+            texts={['FULL-STACK DEVELOPER', 'BACKEND DEVELOPER', 'APPLIED AI/ML ENGINEER', 'SYSTEM ARCHITECT']}
+            mainClassName="text-sm font-bold text-foreground tracking-wider uppercaseoverflow-hidden py-0.5 sm:py-1 md:py-2"
+            staggerFrom={"first"}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-120%" }}
+            staggerDuration={0.025}
+            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={5000}
+          />
         </div>
       </div>
 
