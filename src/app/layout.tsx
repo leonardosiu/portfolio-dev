@@ -47,7 +47,7 @@ const playfairDisplay = Playfair_Display({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Leonardo Siu",
   description: "Software engineer building full-stack applications, backend systems, and applied ML.",
 };
