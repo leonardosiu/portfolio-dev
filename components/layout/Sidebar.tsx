@@ -58,7 +58,7 @@ export default function Sidebar() {
         <Link
           href="/leostwin"
           className="text-muted-light hover:text-foreground transition-colors"
-          aria-label="LeoTwin"
+          aria-label="LeosTwin"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

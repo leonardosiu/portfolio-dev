@@ -3,6 +3,7 @@ import SelectedWork from "@/components/home/SelectedWork";
 import CreativeBridge from "@/components/home/CreativeBridge";
 import LeosTwinPreview from "@/components/home/LeosTwinPreview";
 import Divider from "@/components/layout/Divider";
+import LeoTwinSection from "@/components/about/LeoTwinSection";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
 
         <Divider />
 
-        <LeosTwinPreview />
+        {/* <LeosTwinPreview /> */}
+        <LeoTwinSection />
       </div>
       <Divider />
     </>

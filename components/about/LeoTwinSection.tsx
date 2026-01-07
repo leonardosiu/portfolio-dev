@@ -20,7 +20,7 @@ export default function LeoTwinSection() {
   return (
     <section
       className="px-6 md:px-12 py-24 max-w-7xl mx-auto border-t border-gray-100 relative overflow-hidden"
-      id="leotwin"
+      id="leostwin"
     >
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/15 rounded-full blur-[160px] pointer-events-none"></div>
       
@@ -32,7 +32,7 @@ export default function LeoTwinSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
             </span>
             <span className="text-xs font-mono font-medium tracking-widest text-muted-light uppercase">
-              LEOTWIN • in active development
+              LEOSTWIN • in active development
             </span>
           </div>
           

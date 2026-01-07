@@ -5,9 +5,9 @@ export default function Footer() {
     return (
       <footer className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mx-auto px-12 py-8 max-w-7xl w-full text-sm text-muted">
         {/* built with magic and love */}
-        <p>
+        <p className="text-muted-light">
           © {new Date().getFullYear()} Leonardo Siu. Built with{" "}
-          <span className="group/magic inline-flex items-baseline">
+          <span className="group/magic inline-flex items-baseline group:hover/magic:text-foreground">
             <span className="cursor-pointer font-bold">.✦ ݁˖</span>
             <span className="ml-1 inline-block overflow-hidden max-w-0 group-hover/magic:max-w-[80px] opacity-0 group-hover/magic:opacity-100 translate-x-[-4px] group-hover/magic:translate-x-0 transition-all duration-500 ease-out whitespace-nowrap align-baseline">
               (magic)
