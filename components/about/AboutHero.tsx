@@ -7,12 +7,12 @@ export default function AboutHero() {
     <section className="px-6 md:px-12 pt-12 md:pt-32 pb-12 max-w-7xl mx-auto relative">      
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
         <div className="md:col-span-7 relative z-10">
-          <div className="flex items-center gap-4 text-xs font-mono text-muted-light mb-6 tracking-wide uppercase opacity-80">
+          <div className="flex flex-col md:flex-row md:items-center justify-start gap-4 text-xs font-mono text-muted-light mb-6 tracking-wide uppercase opacity-80">
             <span className="flex items-center gap-1.5">
               <MapPin className="w-4 h-4" />
               San Francisco, CA
             </span>
-            <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+            <span className="w-1 h-1 rounded-full bg-gray-300 md:block hidden"></span>
             <TimestampPST />
           </div>
           

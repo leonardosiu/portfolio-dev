@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "lucide-react";
 
 export default function Hero() {
     return (
-      <section className="space-y-8 px-12 py-8 max-w-7xl w-full mx-auto">
+      <section className="space-y-8 px-6 md:px-12 py-8 max-w-7xl w-full mx-auto">
         {/* tagline */}
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
           I build systems behind <br /> real products

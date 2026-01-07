@@ -4,7 +4,7 @@ import HoverCursor from "@/components/home/HoverCursor";
 
 export default function SelectedWork() {
     return (
-      <section className="space-y-8 px-12 py-8 max-w-7xl w-full mx-auto" id="selected-work">
+      <section className="space-y-8 px-6 md:px-12 py-8 max-w-7xl w-full mx-auto" id="selected-work">
         {/* header */}
         <div className="flex justify-between items-end mb-12">
           <h2 className="text-base font-mono font-bold tracking-widest text-muted-light uppercase">Selected Works</h2>

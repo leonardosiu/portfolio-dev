@@ -3,7 +3,7 @@ import GalleryImageHover from "@/components/home/GalleryImageHover";
 
 export default function CreativeBridge() {
     return (
-      <section className="space-y-8 px-12 py-8 max-w-7xl w-full mx-auto" id="creative-bridge">
+      <section className="space-y-8 px-6 md:px-12 py-8 max-w-7xl w-full mx-auto" id="creative-bridge">
         {/* header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
           <div className="max-w-lg">
