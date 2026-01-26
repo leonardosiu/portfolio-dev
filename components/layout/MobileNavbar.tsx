@@ -30,7 +30,7 @@ export default function MobileNavbar() {
           <Link href="/" className="font-bold text-lg tracking-light uppercase" onClick={closeMenu}>
             Leonardo Siu
           </Link>
-          <span className="text-muted-light dark:text-muted-dark text-lg font-mono uppercase">systems + backend</span>
+          <span className="text-muted-light dark:text-muted-dark text-lg font-mono uppercase">full-stack + backend</span>
         </div>
         
         {/* Hamburger Menu Button */}

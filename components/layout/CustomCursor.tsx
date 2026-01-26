@@ -66,7 +66,7 @@ export default function CustomCursor() {
       }}
       transition={{
         ease: 'easeOut',
-        duration: 0.15,
+        duration: 0.05,
       }}
       variants={{
         initial: { scale: 0.3, opacity: 0 },
@@ -84,7 +84,7 @@ export default function CustomCursor() {
           opacity: shouldShow ? 1 : 0,
         }}
         transition={{
-          duration: 0.3,
+          duration: 0.05,
         }}
       />
     </Cursor>
