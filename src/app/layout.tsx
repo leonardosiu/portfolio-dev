@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import MobileNavbar from "@/components/layout/MobileNavbar";
 import Sidebar from "@/components/layout/Sidebar";
 import CustomCursor from "@/components/layout/CustomCursor";
+import { Analytics } from "@vercel/analytics/next";
 
 // Primary font
 const spaceGrotesk = Space_Grotesk({
@@ -70,6 +71,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
