@@ -17,7 +17,7 @@ export default function CreativeBridge() {
               </span>
             </p>
           </div>
-          <Link href="/projects#creative-bridge" className="inline-flex items-center text-sm font-mono text-muted-light hover:text-primary transition-colors pb-1 mb-1 md:cursor-none">
+          <Link href="/projects#creative-bridge" className="inline-flex items-center text-sm font-mono text-muted-light hover:text-primary transition-colors pb-1 mb-1 pointer-fine:cursor-none">
             VIEW GALLERY
           </Link>
         </div>

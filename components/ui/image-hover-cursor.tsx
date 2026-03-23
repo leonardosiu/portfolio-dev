@@ -43,14 +43,11 @@ export function ImageHoverCursor({
           animate: { scale: 1, opacity: 1 },
           exit: { scale: 0.3, opacity: 0 },
         }}
-        springConfig={{
-          bounce: 0.001,
-        }}
         transition={{
-          ease: 'easeInOut',
-          duration: 0.15,
+          ease: "easeInOut",
+          duration: 0.12,
         }}
-        className="hidden md:block z-[9999]"
+        className="z-[9999]"
       >
         <motion.div
           animate={{

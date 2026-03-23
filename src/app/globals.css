@@ -132,13 +132,12 @@ body {
   font-family: var(--font-primary), system-ui, sans-serif;
 }
 
-/* Hide default cursor on desktop when custom cursor is active */
-@media (min-width: 768px) {
+/* Hide default cursor on fine pointers (mouse / trackpad) — matches CustomCursor (any viewport width) */
+@media (pointer: fine) {
   * {
     cursor: none !important;
   }
 
-  /* Ensure custom cursor is visible */
   body {
     cursor: none !important;
   }
@@ -176,9 +175,11 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling + solid page background (matches portfolio-art) */
 html {
   scroll-behavior: smooth;
+  background-color: var(--background);
+  background-image: none;
 }
 
 /* 3D CD flip effect */

@@ -31,7 +31,7 @@ export function ProjectCard({
   const content = (
     <div className="group block bg-surface-light rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300">
       {/* <ImageHoverCursor label="View Project"> */}
-        <div className="h-80 overflow-hidden relative bg-gray-100 md:cursor-none">
+        <div className="h-80 overflow-hidden relative bg-gray-100 pointer-fine:cursor-none">
           {/* Desktop image */}
           <Image
             src={desktopSrc}

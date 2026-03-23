@@ -2,9 +2,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import {
   motion,
-  SpringOptions,
   useMotionValue,
-  useSpring,
   AnimatePresence,
   Transition,
   Variant,
@@ -14,7 +12,8 @@ import { cn } from '@/lib/utils';
 export type CursorProps = {
   children: React.ReactNode;
   className?: string;
-  springConfig?: SpringOptions;
+  /** @deprecated Position is no longer spring-smoothed (latency). Kept for API compatibility. */
+  springConfig?: unknown;
   attachToParent?: boolean;
   transition?: Transition;
   variants?: {
@@ -28,7 +27,6 @@ export type CursorProps = {
 export function Cursor({
   children,
   className,
-  springConfig,
   attachToParent,
   variants,
   transition,
@@ -59,15 +57,14 @@ export function Cursor({
       onPositionChange?.(e.clientX, e.clientY);
     };
 
-    document.addEventListener('mousemove', updatePosition);
+    document.addEventListener('mousemove', updatePosition, { passive: true });
 
     return () => {
       document.removeEventListener('mousemove', updatePosition);
     };
   }, [cursorX, cursorY, onPositionChange]);
 
-  const cursorXSpring = useSpring(cursorX, springConfig || { duration: 0 });
-  const cursorYSpring = useSpring(cursorY, springConfig || { duration: 0 });
+  // Direct motion values (no spring) — avoids 1-frame+ lag behind the real pointer.
 
   useEffect(() => {
     const handleVisibilityChange = (visible: boolean) => {
@@ -108,10 +105,10 @@ export function Cursor({
   return (
     <motion.div
       ref={cursorRef}
-      className={cn('pointer-events-none fixed left-0 top-0 z-50', className)}
+      className={cn('pointer-events-none fixed left-0 top-0 z-50 will-change-transform', className)}
       style={{
-        x: cursorXSpring,
-        y: cursorYSpring,
+        x: cursorX,
+        y: cursorY,
         translateX: '-50%',
         translateY: '-50%',
       }}
