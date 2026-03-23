@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 export default function Hero() {
     return (
-      <section className="space-y-8 px-6 md:px-12 py-8 max-w-[95rem] w-full mx-auto">
+      <section className="space-y-8 px-6 md:px-12 py-8 max-w-7xl w-full mx-auto">
         {/* tagline */}
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8">
           I build systems behind <br /> real products
@@ -16,7 +16,7 @@ export default function Hero() {
         {/* description / metadata */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-16 md:mt-24">
           {/* description */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             {/** @TODO: add hover effects to bolded words where an icon representing the concept is shown */}
             <p className="text-lg md:text-xl text-muted-light leading-relaxed font-light">
               Currently building <strong className="text-text-light font-medium">backend</strong>, <strong className="text-text-light font-medium">full-stack</strong>, and <strong className="text-text-light font-medium">applied AI/ML</strong> systems as a Computer Science student at UC Irvine.
@@ -41,7 +41,7 @@ export default function Hero() {
           </div>
 
           {/* metadata */}
-          <div className="lg:col-span-5 flex flex-col justify-end space-y-4 font-mono text-sm">
+          <div className="lg:col-span-6 flex flex-col justify-start space-y-4 font-mono text-sm">
             <div className="grid grid-cols-2 md:grid-cols-[2fr_3fr_3fr] lg:grid-cols-[minmax(90px,120px)_1fr_1fr] items-center gap-x-4">
               <span className="text-muted-light group-hover:text-text-light transition-colors">
                 Summer 2026
