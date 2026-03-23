@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code, Briefcase, Mail, Handshake } from "lucide-react";
+import { Code, Briefcase, Handshake } from "lucide-react";
 
 export default function ConnectSection() {
   return (
@@ -9,11 +9,11 @@ export default function ConnectSection() {
       </div>
       
       <h2 className="font-serif text-3xl md:text-5xl text-text-light mb-6">
-        Let's Connect
+        Let&apos;s Connect
       </h2>
       
       <p className="text-lg text-muted-light font-light mb-10 max-w-xl mx-auto leading-relaxed">
-        I'm always open to discussing artifical intelligence, photography, basketball, or
+        I&apos;m always open to discussing artifical intelligence, photography, basketball, or
         swapping Mahjong strategies. Drop me a line.
       </p>
       

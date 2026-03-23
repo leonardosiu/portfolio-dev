@@ -42,7 +42,7 @@ export function Cursor({
       cursorX.set(window.innerWidth / 2);
       cursorY.set(window.innerHeight / 2);
     }
-  }, []);
+  }, [cursorX, cursorY]);
 
   useEffect(() => {
     if (!attachToParent) {
@@ -62,7 +62,7 @@ export function Cursor({
     return () => {
       document.removeEventListener('mousemove', updatePosition);
     };
-  }, [cursorX, cursorY, onPositionChange]);
+  }, [attachToParent, cursorX, cursorY, onPositionChange]);
 
   // Direct motion values (no spring) — avoids 1-frame+ lag behind the real pointer.
 
@@ -71,36 +71,40 @@ export function Cursor({
       setIsVisible(visible);
     };
 
-    if (attachToParent && cursorRef.current) {
-      const parent = cursorRef.current.parentElement;
-      if (parent) {
-        parent.addEventListener('mouseenter', () => {
-          parent.style.cursor = 'none';
-          handleVisibilityChange(true);
-        });
-        parent.addEventListener('mouseleave', () => {
-          parent.style.cursor = 'auto';
-          handleVisibilityChange(false);
-        });
-      }
-    }
+    if (!attachToParent) return;
+
+    const cursorNode = cursorRef.current;
+    if (!cursorNode) return;
+
+    const parent = cursorNode.parentElement;
+    if (!parent) return;
+
+    const onMouseEnter = () => {
+      parent.style.cursor = 'none';
+      handleVisibilityChange(true);
+    };
+
+    const onMouseLeave = () => {
+      parent.style.cursor = 'auto';
+      handleVisibilityChange(false);
+    };
+
+    parent.addEventListener('mouseenter', onMouseEnter);
+    parent.addEventListener('mouseleave', onMouseLeave);
 
     return () => {
-      if (attachToParent && cursorRef.current) {
-        const parent = cursorRef.current.parentElement;
-        if (parent) {
-          parent.removeEventListener('mouseenter', () => {
-            parent.style.cursor = 'none';
-            handleVisibilityChange(true);
-          });
-          parent.removeEventListener('mouseleave', () => {
-            parent.style.cursor = 'auto';
-            handleVisibilityChange(false);
-          });
-        }
-      }
+      parent.removeEventListener('mouseenter', onMouseEnter);
+      parent.removeEventListener('mouseleave', onMouseLeave);
+      parent.style.cursor = 'auto';
     };
   }, [attachToParent]);
+
+  useEffect(() => {
+    return () => {
+      // Restore default cursor if this component unmounts while globally hiding it.
+      document.body.style.cursor = 'auto';
+    };
+  }, []);
 
   return (
     <motion.div

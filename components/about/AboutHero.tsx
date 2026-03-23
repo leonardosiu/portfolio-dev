@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPin, Camera } from "lucide-react";
+import { MapPin } from "lucide-react";
 import TimestampPST from "./PacificTime";
 
 export default function AboutHero() {
@@ -27,16 +27,16 @@ export default function AboutHero() {
           
           <div className="text-lg leading-relaxed text-muted-light space-y-6 font-light">
             <p>
-              Hey, I'm Leo, a third-year CS major at UCI. I build 
+              Hey, I&apos;m Leo, a third-year CS major at UCI. I build 
               end-to-end software across backend and applied ML, with
               a focus on how it helps people. I believe the best engineering 
               comes from understanding the human context, not just the technical
               constraints.
             </p>
             <p>
-              When I'm away from the terminal, I slow things down.
+              When I&apos;m away from the terminal, I slow things down.
               I like taking photos with my Fujifilm X100V, playing sports
-              when I'm convinced to play, mediating disputes
+              when I&apos;m convinced to play, mediating disputes
               between my two cats (Udon and Ramen), and attempting to
               not give away the win in Mahjong.
             </p>
@@ -58,9 +58,6 @@ export default function AboutHero() {
               </p>
             </div>
           </div>
-          {/* <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-surface-light rounded-full flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-20 border border-gray-100">
-            <Camera className="w-8 h-8 text-indigo-500 animate-pulse" />
-          </div> */}
         </div>
       </div>
     </section>

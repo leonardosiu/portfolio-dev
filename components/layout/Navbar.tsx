@@ -19,7 +19,9 @@ export default function Navbar() {
         <Link href="/" className="font-bold text-lg tracking-light uppercase">
           Leonardo Siu
         </Link>
-        <span className="text-muted-light dark:text-muted-dark text-lg font-mono uppercase">// full-stack + backend</span>
+        <span className="text-muted-light dark:text-muted-dark text-lg font-mono uppercase">
+          {'// full-stack + backend'}
+        </span>
       </div>
       <div className="flex items-center gap-8 text-sm font-medium uppercase">
         <Link 

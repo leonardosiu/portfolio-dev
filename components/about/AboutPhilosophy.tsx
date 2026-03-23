@@ -22,7 +22,7 @@ export default function AboutPhilosophy() {
             </h3>
             
             <p className="text-lg text-muted-light font-light leading-relaxed mb-8">
-              Whether it's debugging a race condition or framing a
+              Whether it&apos;s debugging a race condition or framing a
               photograph, the goal is always clarity. I strive to strip away
               the unnecessary to reveal the core narrative—be it in code,
               design, or life.

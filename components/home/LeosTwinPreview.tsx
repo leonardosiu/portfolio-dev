@@ -35,8 +35,8 @@ export default function LeosTwinPreview() {
             {/* description */}
             <p className="text-lg text-muted-light leading-relaxed font-light max-w-xl">
               LeosTwin is a digital twin trained on my projects, writing, and experiences.
-              Ask about my work, how I think about systems and products, or what I'm building toward.
-              Responses reflect how I reason, not just what I've done.
+              Ask about my work, how I think about systems and products, or what I&apos;m building toward.
+              Responses reflect how I reason, not just what I&apos;ve done.
             </p>
 
             {/* button */}
@@ -52,7 +52,7 @@ export default function LeosTwinPreview() {
               <Link href="#" className="group w-full text-left p-4 rounded-lg border border-muted-light/70 hover:border-border-light hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer backdrop-blur-sm">
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-mono text-xs md:text-sm text-muted-light group-hover:text-indigo-600 transition-colors group-hover:underline decoration-indigo-200 underline-offset-4 flex-1 min-w-0">
-                    "Tell me about some of your projects."
+                    &quot;Tell me about some of your projects.&quot;
                   </span>
                   <MessageSquare className="w-5 h-5 text-muted-light group-hover:text-indigo-500 opacity-70 group-hover:opacity-100 transition-all duration-300 ease-out shrink-0" />
                 </div>
@@ -60,7 +60,7 @@ export default function LeosTwinPreview() {
               <Link href="#" className="group w-full text-left p-4 rounded-lg border border-muted-light/70 hover:border-border-light hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer backdrop-blur-sm">
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-mono text-xs md:text-sm text-muted-light group-hover:text-indigo-600 transition-colors group-hover:underline decoration-indigo-200 underline-offset-4 flex-1 min-w-0">
-                    "What kind of engineer are you trying to become?"
+                    &quot;What kind of engineer are you trying to become?&quot;
                   </span>
                   <MessageSquare className="w-5 h-5 text-muted-light group-hover:text-indigo-500 opacity-70 group-hover:opacity-100 transition-all duration-300 ease-out shrink-0" />
                 </div>
@@ -68,7 +68,7 @@ export default function LeosTwinPreview() {
               <Link href="#" className="group w-full text-left p-4 rounded-lg border border-muted-light/70 hover:border-border-light hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ease-out cursor-pointer backdrop-blur-sm">
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-mono text-xs md:text-sm text-muted-light group-hover:text-indigo-600 transition-colors group-hover:underline decoration-indigo-200 underline-offset-4 flex-1 min-w-0">
-                    "What are you learning right now?"
+                    &quot;What are you learning right now?&quot;
                   </span>
                   <MessageSquare className="w-5 h-5 text-muted-light group-hover:text-indigo-500 opacity-70 group-hover:opacity-100 transition-all duration-300 ease-out shrink-0" />
                 </div>

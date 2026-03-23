@@ -45,8 +45,8 @@ export default function LeoTwinSection() {
           
           <p className="text-lg text-muted-light leading-relaxed font-light max-w-xl">
             LeosTwin is a digital twin trained on my projects, writing, and experiences.
-            Ask about my work, how I think about systems and products, or what I'm building toward.
-            Responses reflect how I reason, not just what I've done.
+            Ask about my work, how I think about systems and products, or what I&apos;m building toward.
+            Responses reflect how I reason, not just what I&apos;ve done.
           </p>
           
           <div className="pt-4">
@@ -70,7 +70,7 @@ export default function LeoTwinSection() {
               >
                 <div className="flex items-start justify-between gap-4">
                   <span className="font-mono text-xs md:text-sm text-muted-light group-hover:text-indigo-600 transition-colors">
-                    "{prompt.text}"
+                    &quot;{prompt.text}&quot;
                   </span>
                   <MessageSquare className="w-4 h-4 text-gray-300 group-hover:text-indigo-500 transition-colors opacity-50 group-hover:opacity-100 shrink-0" />
                 </div>

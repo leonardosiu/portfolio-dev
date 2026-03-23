@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { ImageHoverCursor } from "@/components/ui/image-hover-cursor";
 
 type ProjectCardProps = {
   title: string;
@@ -20,7 +19,6 @@ export function ProjectCard({
   title,
   description,
   category,
-  tech,
   imageSrc,
   desktopImageSrc,
   imageAlt,

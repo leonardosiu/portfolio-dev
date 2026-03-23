@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Code, Bot, Globe } from "lucide-react";
+import { ArrowLeft, Code, Globe } from "lucide-react";
 import type { Project } from "@/lib/projects";
 
 type ProjectHeaderProps = {

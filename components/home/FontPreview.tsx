@@ -18,7 +18,7 @@ export default function FontPreview() {
         <div className="space-y-2">
           <h2 className="text-sm uppercase text-muted mb-2">Mono: Cascadia Code</h2>
           <code className="text-2xl block" style={{ fontFamily: 'var(--font-mono)' }}>
-            const hello = "world";
+            const hello = &quot;world&quot;;
           </code>
           <code className="text-lg block" style={{ fontFamily: 'var(--font-mono)' }}>
             function test() {'{'} return true; {'}'}
