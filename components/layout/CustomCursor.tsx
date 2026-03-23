@@ -22,6 +22,7 @@ export default function CustomCursor() {
   const pointerFine = usePointerFine();
   const [isVisible, setIsVisible] = useState(false);
   const [shouldHide, setShouldHide] = useState(false);
+  const [isInteractiveHover, setIsInteractiveHover] = useState(false);
 
   useEffect(() => {
     const checkHideCursor = () => {
@@ -36,16 +37,32 @@ export default function CustomCursor() {
 
     const handleMouseLeave = () => {
       setIsVisible(false);
+      setIsInteractiveHover(false);
+    };
+
+    const isInteractiveElement = (target: EventTarget | null) => {
+      if (!(target instanceof Element)) return false;
+      return Boolean(
+        target.closest(
+          'a, button, [role="button"], input, select, textarea, summary, label, [data-cursor-link="true"]'
+        )
+      );
+    };
+
+    const handleMouseOver = (event: MouseEvent) => {
+      setIsInteractiveHover(isInteractiveElement(event.target));
     };
 
     if (pointerFine) {
       document.addEventListener("mouseleave", handleMouseLeave);
+      document.addEventListener("mouseover", handleMouseOver, { passive: true });
     }
 
     checkHideCursor();
 
     return () => {
       document.removeEventListener("mouseleave", handleMouseLeave);
+      document.removeEventListener("mouseover", handleMouseOver);
       observer.disconnect();
     };
   }, [pointerFine]);
@@ -80,10 +97,12 @@ export default function CustomCursor() {
       <motion.div
         className="w-6 h-6 rounded-full bg-blue-500/80 mix-blend-difference"
         animate={{
-          opacity: shouldShow ? 1 : 0,
+          opacity: shouldShow ? isInteractiveHover ? 0.7 : 1 : 0,
+          scale: isInteractiveHover ? 1.45 : 1,
         }}
         transition={{
-          duration: 0.05,
+          duration: 0.08,
+          ease: "easeOut",
         }}
       />
     </Cursor>
