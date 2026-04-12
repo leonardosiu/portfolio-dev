@@ -35,7 +35,10 @@ export function Cursor({
   const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
   const cursorRef = useRef<HTMLDivElement>(null);
+  const onPositionChangeRef = useRef(onPositionChange);
   const [isVisible, setIsVisible] = useState(!attachToParent);
+
+  onPositionChangeRef.current = onPositionChange;
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -54,7 +57,7 @@ export function Cursor({
     const updatePosition = (e: MouseEvent) => {
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
-      onPositionChange?.(e.clientX, e.clientY);
+      onPositionChangeRef.current?.(e.clientX, e.clientY);
     };
 
     document.addEventListener('mousemove', updatePosition, { passive: true });
@@ -62,7 +65,7 @@ export function Cursor({
     return () => {
       document.removeEventListener('mousemove', updatePosition);
     };
-  }, [attachToParent, cursorX, cursorY, onPositionChange]);
+  }, [attachToParent, cursorX, cursorY]);
 
   // Direct motion values (no spring) — avoids 1-frame+ lag behind the real pointer.
 

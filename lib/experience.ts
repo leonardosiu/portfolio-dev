@@ -147,7 +147,7 @@ export const leadershipExperiences: Experience[] = [
     title: "Software Lead",
     company: "CareTech @ UCI",
     period: "Oct 2025 - Present",
-    category: "Embedded Roots",
+    category: "Health Tech",
     description:
       "Student health-tech initiative building AI-powered tools for brain health and nutrition.",
     highlights: [

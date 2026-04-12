@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Cursor } from "@/components/motion-primitives/cursor";
 
@@ -23,6 +23,9 @@ export default function CustomCursor() {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldHide, setShouldHide] = useState(false);
   const [isInteractiveHover, setIsInteractiveHover] = useState(false);
+  const shouldHideRef = useRef(shouldHide);
+
+  shouldHideRef.current = shouldHide;
 
   useEffect(() => {
     const checkHideCursor = () => {
@@ -50,7 +53,8 @@ export default function CustomCursor() {
     };
 
     const handleMouseOver = (event: MouseEvent) => {
-      setIsInteractiveHover(isInteractiveElement(event.target));
+      const next = isInteractiveElement(event.target);
+      setIsInteractiveHover((prev) => (prev === next ? prev : next));
     };
 
     if (pointerFine) {
@@ -67,15 +71,27 @@ export default function CustomCursor() {
     };
   }, [pointerFine]);
 
-  const handlePositionChange = () => {
-    if (pointerFine && !shouldHide) {
+  const handlePositionChange = useCallback(() => {
+    if (pointerFine && !shouldHideRef.current) {
       setIsVisible(true);
     }
-  };
-
-  if (!pointerFine) return null;
+  }, [pointerFine]);
 
   const shouldShow = isVisible && !shouldHide;
+
+  const cursorVariants = useMemo(
+    () => ({
+      initial: { scale: 0.3, opacity: 0 },
+      animate: {
+        scale: shouldShow ? 1 : 0.3,
+        opacity: shouldShow ? 1 : 0,
+      },
+      exit: { scale: 0.3, opacity: 0 },
+    }),
+    [shouldShow]
+  );
+
+  if (!pointerFine) return null;
 
   return (
     <Cursor
@@ -84,14 +100,7 @@ export default function CustomCursor() {
         ease: "linear",
         duration: 0,
       }}
-      variants={{
-        initial: { scale: 0.3, opacity: 0 },
-        animate: {
-          scale: shouldShow ? 1 : 0.3,
-          opacity: shouldShow ? 1 : 0,
-        },
-        exit: { scale: 0.3, opacity: 0 },
-      }}
+      variants={cursorVariants}
       onPositionChange={handlePositionChange}
     >
       <motion.div
