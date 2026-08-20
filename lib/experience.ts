@@ -18,6 +18,34 @@ export type Experience = {
 };
 
 export const professionalExperiences: Experience[] = [
+  // {
+  //   title: "Software Engineer Intern",
+  //   company: "Google",
+  //   period: "Incoming Summer 2027",
+  //   location: "TBD",
+  //   category: "SWE",
+  //   // note: "This is professional R&D with NDA constraints, so we’ll keep it high-level and impact-focused.",
+  //   description:
+  //     "PLACEHOLDER",
+  //   highlights: [
+  //     "PLACEHOLDER",
+  //   ],
+  //   technologies: [],
+  // },
+  {
+    title: "Software Engineer Intern",
+    company: "Walmart Global Tech",
+    period: "Jun 2026 — Aug 2026",
+    location: "Sunnyvale, CA",
+    category: "SWE",
+    // note: "This is professional R&D with NDA constraints, so we’ll keep it high-level and impact-focused.",
+    description:
+      "PLACEHOLDER",
+    highlights: [
+      "PLACEHOLDER",
+    ],
+    technologies: ["iOS Development", "Observability / Telemetry", "ADA Accessebility"],
+  },
   {
     title: "Backend and AI Systems Engineer",
     company: "Human Proximity",
