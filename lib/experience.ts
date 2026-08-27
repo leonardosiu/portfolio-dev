@@ -38,13 +38,16 @@ export const professionalExperiences: Experience[] = [
     period: "Jun 2026 — Aug 2026",
     location: "Sunnyvale, CA",
     category: "SWE",
-    // note: "This is professional R&D with NDA constraints, so we’ll keep it high-level and impact-focused.",
+    note: "Some implementation details are kept high-level out of respect for internal systems and tooling.",
     description:
-      "PLACEHOLDER",
+      "Worked on the Customer Profile – Wallet team, building production observability infrastructure and accessibility improvements for iOS payment flows handling millions of daily transactions.",
     highlights: [
-      "PLACEHOLDER",
+      "Redesigned the iOS error emission layer in Swift to enforce structured error types and operation context, reducing untyped wallet errors from ~73% to near zero across 30+ production GraphQL operations.",
+      "Pivoted from Grafana to OpenObserve after hitting Prometheus schema constraints, consolidating 20+ manual monitoring queries into real-time dashboards across 5 payment types.",
+      "Closed 6+ ADA accessibility tickets across production wallet flows, improving VoiceOver navigation for visually impaired users across core payment screens.",
+      "Shipped end-to-end observability coverage for a payment system with no prior monitoring, spanning iOS instrumentation, data pipeline research, and production dashboard engineering.",
     ],
-    technologies: ["iOS Development", "Observability / Telemetry", "ADA Accessebility"],
+    technologies: ["iOS Development", "Observability / Telemetry", "ADA Accessibility"],
   },
   {
     title: "Backend and AI Systems Engineer",

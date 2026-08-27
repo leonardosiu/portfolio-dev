@@ -44,17 +44,17 @@ export default function Hero() {
           <div className="lg:col-span-6 flex flex-col justify-start space-y-4 font-mono text-sm">
             <div className="grid grid-cols-2 md:grid-cols-[2fr_3fr_3fr] lg:grid-cols-[minmax(90px,120px)_1fr_1fr] items-center gap-x-4">
               <span className="text-muted-light group-hover:text-text-light transition-colors">
-                Incoming Summer 2027
+                Incoming 2027
               </span>
               <span className="text-right md:text-left font-medium">Google</span>
-              <span className="hidden md:block text-muted-light/90">Software Engineering Intern</span>
+              <span className="hidden md:block text-muted-light/90">Software Engineer Intern</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-[2fr_3fr_3fr] lg:grid-cols-[minmax(90px,120px)_1fr_1fr] items-center gap-x-4">
               <span className="text-muted-light group-hover:text-text-light transition-colors">
                 Summer 2026
               </span>
               <span className="text-right md:text-left font-medium">Walmart Global Tech</span>
-              <span className="hidden md:block text-muted-light/90">Software Engineering Intern</span>
+              <span className="hidden md:block text-muted-light/90">Software Engineer Intern</span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-[2fr_3fr_3fr] lg:grid-cols-[minmax(90px,120px)_1fr_1fr] items-center gap-x-4">
               <span className="text-muted-light group-hover:text-text-light transition-colors">
