@@ -5,7 +5,8 @@ export default function Footer() {
     return (
       <footer className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mx-auto px-12 py-8 max-w-7xl w-full text-sm text-muted">
         {/* built with magic and love */}
-        <p className="text-muted-light">
+        <div className="flex items-center gap-4">
+          <p className="text-muted-light">
           © {new Date().getFullYear()} Leonardo Siu. Built with{" "}
           <span className="group/magic inline-flex items-baseline group:hover/magic:text-foreground">
             <span className="cursor-pointer font-bold">.✦ ݁˖</span>
@@ -21,7 +22,13 @@ export default function Footer() {
             </span>
           </span>
           .
-        </p>
+          </p>
+          {process.env.NEXT_PUBLIC_LAST_MODIFIED && (
+            <span className="text-muted-light/60 text-xs whitespace-nowrap">
+              last modified {process.env.NEXT_PUBLIC_LAST_MODIFIED}
+            </span>
+          )}
+        </div>
         <div className="flex gap-6">
           <Link href="https://github.com/baller7215" className="group/github flex items-center gap-2 text-muted-light hover:text-foreground transition-colors">
             <Github className="w-5 h-5" />
