@@ -80,52 +80,6 @@ export const projects: Project[] = [
       ],
     },
     previousProject: "vortex-engine",
-    nextProject: "human-proximity",
-  },
-  {
-    id: "human-proximity",
-    title: "BeesEye @ Human Proximity",
-    description:
-      "A real-time networking platform for in-person events, built around proximity-aware interactions. I designed and implemented the backend APIs and AI microservices powering matchmaking, messaging, and event logic.",
-    category: "Backend",
-    tech: ["Backend", "APIs", "AI Systems", "Microservices", "Mobile App"],
-    imageSrc: "/images/selected-work/human-proximity-[16-9].png",
-    desktopImageSrc: "/images/selected-work/human-proximity-[21-9].png",
-    imageAlt: "Human Proximity",
-    longDescription: "BeesEye is a mobile-first networking platform that uses real-time systems and AI services to facilitate meaningful connections at in-person events.",
-    role: "Backend & AI Systems Engineer",
-    timeline: "Aug 2025 - Present",
-    domain: "Social Networking / AI",
-    demoUrl: "",
-    sections: {
-        whatItIs: "BeesEye is an in-progress mobile application developed at Human Proximity that focuses on enabling real-time, AI-assisted networking during live events. The platform integrates mobile clients with backend services and AI-driven workflows to support dynamic, context-aware interactions between users. Due to the project’s active development status, specific product details and algorithms are not publicly disclosed.",
-        myRole: "I worked as a backend and AI systems engineer, owning the design and implementation of core service infrastructure that powers the application. My responsibilities included building the backend API layer that interfaces with mobile clients, designing service boundaries between application logic and AI components, and implementing AI-facing microservices that could be reliably invoked from production workflows. I focused on ensuring that the system could support real-time interactions while remaining modular and extensible as product requirements evolved. In addition to backend ownership, I collaborated closely with frontend and product teams to define API contracts, align data models, and ensure that system behavior remained predictable under live usage conditions.",
-        constraints: [
-            {
-                number: "01",
-                text: "Cross‑platform consistency: ensure responsive, smooth UI/UX across iOS and Android with predictable flows and minimal friction."
-            },
-            {
-                number: "02",
-                text: "Event onboarding flow: joining an event must be intuitive and non‑disruptive, with clear steps."
-            },
-            {
-                number: "03",
-                text: "AI-assisted matchmaking: the system needs to dynamically suggest connections based on user profiles, networking goals, and event context."
-            },
-            {
-                number: "04",
-                text: "Real‑time scale: support 100+ concurrent attendees with simultaneous matching and low‑latency updates."
-            }
-        ],
-        learnings: [
-            "Multi‑provider authentication should feel seamless: align identity flows across email/password, Sign in with Apple, and LinkedIn on iOS and Android.",
-            "Load testing informs reality: use Locust to validate 300+ concurrent attendees to capture latency, throughput, response times, and failure modes before live events.",
-            "Context-aware matchmaking requires dynamic data: store event metadata, user profiles, and real‑time interaction history to personalize matches.",
-            "Event‑driven pipelines scale cleanly: use Firebase Cloud Functions and database triggers to orchestrate matching as decoupled, idempotent handlers with retries and observability."
-        ]
-    },
-    previousProject: "retinova",
     nextProject: "nlp-bias-detection",
   },
   {
@@ -182,7 +136,7 @@ export const projects: Project[] = [
             "Ship the interface: a lightweight inference service with clear contracts turns models into usable products."
         ]
     },
-    previousProject: "human-proximity",
+    previousProject: "retinova",
     nextProject: "grad-cam-tumor",
   },
   {

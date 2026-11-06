@@ -8,39 +8,10 @@ export default function SelectedWork() {
         {/* header */}
         <div className="flex justify-between items-end mb-12">
           <h2 className="text-base font-mono font-bold tracking-widest text-muted-light uppercase">Selected Works</h2>
-          <span className="text-sm font-mono text-muted-light">01 — 03</span>
+          <span className="text-sm font-mono text-muted-light">01 — 02</span>
         </div>
         {/* selected work items */}
         <div className="grid grid-cols-1 gap-16 md:gap-24">
-          {/* human proximity */}
-          <div className="group">
-            {/* image */}
-            <HoverCursor
-              desktopSrc="/images/selected-work/human-proximity-[21-9].png"
-              mobileSrc="/images/selected-work/human-proximity-[16-9].png"
-              alt="Human Proximity"
-              href="/projects/human-proximity"
-            />
-            {/* content */}
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
-              <div className="flex-1">
-                <h3 className="text-2xl font-medium group-hover:text-primary transition-colors">
-                  Human Proximity
-                </h3>
-                <p className="text-muted-light dark:text-muted-dark mt-1 max-w-xl">
-                  <span className="font-medium text-text-light/70 italic">
-                    building beeseye, a mobile app for real-time networking in events.
-                  </span>
-                  <br />
-                  designed and implemented the backend and AI service architecture, from the API layer and AI microservices to the core product functionality.
-                </p>
-              </div>
-              <div className="font-mono text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide mt-2 md:mt-1">
-                Backend • APIs • AI Systems • Microservices • Mobile App
-              </div>
-            </div>
-          </div>
-
           {/* retinova */}
           <div className="group">
             {/* image */}
