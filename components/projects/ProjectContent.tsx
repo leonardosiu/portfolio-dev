@@ -36,6 +36,25 @@ export default function ProjectContent({ project }: ProjectContentProps) {
         </div>
       )}
 
+      {sections.highlights && sections.highlights.length > 0 && (
+        <div id="highlights">
+          <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">
+            <span className="w-8 h-px bg-gray-300" />
+            Highlights
+          </h3>
+          <ul className="space-y-6">
+            {sections.highlights.map((highlight) => (
+              <li key={highlight} className="flex gap-4 items-start">
+                <Check className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <span className="text-text-light leading-relaxed font-light text-lg">
+                  {highlight}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {sections.constraints && sections.constraints.length > 0 && (
         <div id="constraints">
           <h3 className="font-mono text-sm font-bold tracking-widest text-muted-light uppercase mb-5 flex items-center gap-3">

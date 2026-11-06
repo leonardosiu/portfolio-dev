@@ -86,7 +86,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
               Ask LeoTwin
             </a>
           )} */}
-          {project.demoUrl ? (
+          {project.demoUrl && (
             <a
               href={project.demoUrl}
               target="_blank"
@@ -96,15 +96,6 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
               <Globe className="w-5 h-5" />
               Live Demo
             </a>
-          ) : (
-            <button
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-surface-light border border-gray-200 text-sm font-medium text-muted-light opacity-60 cursor-not-allowed"
-              disabled
-              title="Private Deployment"
-            >
-              <Globe className="w-5 h-5" />
-              Live Demo
-            </button>
           )}
         </div>
       </section>

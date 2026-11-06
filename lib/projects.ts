@@ -18,6 +18,7 @@ export type Project = {
   sections?: {
     whatItIs?: string;
     myRole?: string;
+  highlights?: string[];
     constraints?: Array<{
       number: string;
       text: string;
@@ -29,6 +30,35 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "walmart-global-tech",
+    title: "Walmart Global Tech",
+    description:
+      "Built production observability and accessibility improvements for iOS payment flows on the Customer Profile - Wallet team.",
+    category: "Software Engineering Internship",
+    tech: ["Swift", "iOS", "GraphQL", "OpenObserve", "VoiceOver"],
+    imageSrc: "/images/selected-work/walmart-[16-9].png",
+    desktopImageSrc: "/images/selected-work/walmart-[21-9].png",
+    imageAlt: "Walmart Global Tech internship: wallet observability and accessibility",
+    longDescription:
+      "During my Software Engineer Internship at Walmart Global Tech, I worked on the Customer Profile - Wallet team, improving observability and accessibility for iOS payment flows handling millions of daily transactions.",
+    role: "Software Engineer Intern",
+    timeline: "Jun 2026 - Aug 2026",
+    domain: "iOS / Wallet Platform",
+    sections: {
+      whatItIs:
+        "The Customer Profile - Wallet team builds iOS payment experiences used at scale. My internship work focused on production monitoring and accessibility across core wallet flows.",
+      myRole:
+        "I redesigned wallet error reporting in Swift, built real-time observability dashboards, and resolved VoiceOver accessibility issues. Some implementation details are kept high-level out of respect for internal systems and tooling.",
+      highlights: [
+        "Redesigned the iOS error emission layer in Swift with structured error types and operation context, reducing untyped wallet errors from about 73% to near zero across 30+ production GraphQL operations.",
+        "Moved monitoring from Grafana to OpenObserve after encountering Prometheus schema constraints, consolidating 20+ manual queries into real-time dashboards across five payment types.",
+        "Closed 6+ ADA accessibility tickets across production wallet flows, improving VoiceOver navigation across core payment screens.",
+        "Shipped end-to-end observability coverage for a payment system with no prior monitoring, spanning iOS instrumentation, data pipeline research, and production dashboard engineering.",
+      ],
+    },
+    nextProject: "retinova",
+  },
   {
     id: "retinova",
     title: "RetiNova",
@@ -79,7 +109,7 @@ export const projects: Project[] = [
         "Planning and tight task delegation are critical in hackathons. Having clear boundaries and priorities keep shipping speed high.",
       ],
     },
-    previousProject: "vortex-engine",
+    previousProject: "walmart-global-tech",
     nextProject: "nlp-bias-detection",
   },
   {

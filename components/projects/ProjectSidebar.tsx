@@ -14,6 +14,7 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
     const sections = [
       { id: "overview", condition: project.sections?.whatItIs },
       { id: "my-role", condition: project.sections?.myRole },
+      { id: "highlights", condition: project.sections?.highlights },
       { id: "constraints", condition: project.sections?.constraints },
       { id: "learnings", condition: project.sections?.learnings },
     ].filter((s) => s.condition);
@@ -107,6 +108,21 @@ export default function ProjectSidebar({ project }: ProjectSidebarProps) {
                   }`}
                 >
                   My Role
+                </a>
+              </li>
+            )}
+            {project.sections?.highlights && (
+              <li>
+                <a
+                  href="#highlights"
+                  onClick={(e) => handleNavClick("highlights", e)}
+                  className={`pl-4 block transition-colors ${
+                    activeSection === "highlights"
+                      ? "border-l-2 border-primary -ml-[2px] text-text-light font-medium"
+                      : "hover:text-primary cursor-pointer"
+                  }`}
+                >
+                  Highlights
                 </a>
               </li>
             )}

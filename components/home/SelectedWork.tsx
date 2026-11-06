@@ -8,10 +8,37 @@ export default function SelectedWork() {
         {/* header */}
         <div className="flex justify-between items-end mb-12">
           <h2 className="text-base font-mono font-bold tracking-widest text-muted-light uppercase">Selected Works</h2>
-          <span className="text-sm font-mono text-muted-light">01 — 02</span>
+          <span className="text-sm font-mono text-muted-light">01 — 03</span>
         </div>
         {/* selected work items */}
         <div className="grid grid-cols-1 gap-16 md:gap-24">
+          {/* walmart global tech */}
+          <div className="group">
+            <HoverCursor
+              desktopSrc="/images/selected-work/walmart-[21-9].png"
+              mobileSrc="/images/selected-work/walmart-[16-9].png"
+              alt="Walmart Global Tech internship: wallet observability and accessibility"
+              href="/projects/walmart-global-tech"
+            />
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
+              <div className="flex-1">
+                <h3 className="text-2xl font-medium group-hover:text-primary transition-colors">
+                  Walmart Global Tech
+                </h3>
+                <p className="text-muted-light dark:text-muted-dark mt-1 max-w-xl">
+                  <span className="font-medium text-text-light/70 italic">
+                    software engineering internship, Jun - Aug 2026.
+                  </span>
+                  <br />
+                  improved iOS wallet observability and accessibility for payment flows handling millions of daily transactions.
+                </p>
+              </div>
+              <div className="font-mono text-xs text-muted-light dark:text-muted-dark uppercase tracking-wide mt-2 md:mt-1">
+                iOS • Swift • Observability • Accessibility
+              </div>
+            </div>
+          </div>
+
           {/* retinova */}
           <div className="group">
             {/* image */}
